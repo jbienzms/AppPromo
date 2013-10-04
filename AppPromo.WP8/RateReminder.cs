@@ -10,6 +10,11 @@ using System.Windows;
 using System.Windows.Controls;
 #endif
 
+#if WIN_RT
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+#endif
+
 namespace AppPromo
 {
     internal static class PlatformHelper
@@ -270,7 +275,12 @@ namespace AppPromo
         #endregion // Overridables / Event Triggers
 
         #region Overrides / Event Handlers
+        #if WINDOWS_PHONE
         private async void Control_Loaded(object sender, RoutedEventArgs e)
+        #endif
+        #if WIN_RT
+        private async void Control_Loaded(object sender, RoutedEventArgs e)
+        #endif
         {
             // Only attempt reminder if runtime, not design time
             if (!PlatformHelper.IsInDesignMode)
