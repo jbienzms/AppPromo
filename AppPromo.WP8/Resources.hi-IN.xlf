@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="hi-IN" original="Resources.resx" tool-id="MultilingualAppToolkit" product-name="AppPromo.WP8" product-version="1.0.0.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.0.1000.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit translate="yes" id="Resx/RateAppPrompt" xml:space="preserve">
+          <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">यह लगता है जैसे तुम app थोड़ी देर के लिए अब किया गया है का उपयोग कर और हम आपकी टिप्पणी सुनने के लिए प्यार होता। तुम दर app या प्रतिक्रिया प्रदान करने के लिए चाहते हैं?</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
