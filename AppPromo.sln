@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppPromo.Win8", "AppPromo.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.WP8", "Sample.WP8\Sample.WP8.csproj", "{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Win8", "Sample.Win8\Sample.Win8.csproj", "{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,30 @@ Global
 		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|x86.ActiveCfg = Release|x86
 		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|x86.Build.0 = Release|x86
 		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|x86.Deploy.0 = Release|x86
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|ARM.ActiveCfg = Debug|ARM
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|ARM.Build.0 = Debug|ARM
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|ARM.Deploy.0 = Debug|ARM
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|x64.ActiveCfg = Debug|x64
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|x64.Build.0 = Debug|x64
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|x64.Deploy.0 = Debug|x64
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|x86.ActiveCfg = Debug|x86
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|x86.Build.0 = Debug|x86
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Debug|x86.Deploy.0 = Debug|x86
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|ARM.ActiveCfg = Release|ARM
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|ARM.Build.0 = Release|ARM
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|ARM.Deploy.0 = Release|ARM
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|x64.ActiveCfg = Release|x64
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|x64.Build.0 = Release|x64
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|x64.Deploy.0 = Release|x64
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|x86.ActiveCfg = Release|x86
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|x86.Build.0 = Release|x86
+		{CDDE07C0-F828-4AFF-ABC5-07CFA6777329}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

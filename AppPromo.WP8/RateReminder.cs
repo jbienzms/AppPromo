@@ -59,7 +59,7 @@ namespace AppPromo
             return Resources.ResourceManager.GetString(key);
             #endif
             #if WIN_RT
-            if (resourceLoader == null) { resourceLoader = new ResourceLoader(); }
+            if (resourceLoader == null) { resourceLoader = new ResourceLoader("AppPromo.Win8/Resources"); }
             return resourceLoader.GetString(key);
             #endif
         }
