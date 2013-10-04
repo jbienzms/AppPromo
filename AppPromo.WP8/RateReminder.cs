@@ -11,19 +11,35 @@ using System.Windows.Controls;
 #endif
 
 #if WIN_RT
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.ApplicationModel.Resources;
+using Windows.Storage;
+using Windows.System;
+using Windows.ApplicationModel;
 #endif
 
 namespace AppPromo
 {
     internal static class PlatformHelper
     {
+        #if WIN_RT
+        static private ResourceLoader resourceLoader;
+        #endif
+
         static public async Task<bool> AskOkCancel(string message, string title)
         {
             #if WINDOWS_PHONE
             var result = MessageBox.Show(message, title, MessageBoxButton.OKCancel);
             return result == MessageBoxResult.OK;
+            #endif
+            #if WIN_RT
+            var dlg = new MessageDialog(message, title);
+            dlg.Commands.Add(new UICommand(ReadResourceString("OK"), null, true));
+            dlg.Commands.Add(new UICommand(ReadResourceString("Cancel"), null, false));
+            var cmd = await dlg.ShowAsync();
+            return (bool)cmd.Id;
             #endif
         }
 
@@ -32,12 +48,19 @@ namespace AppPromo
             #if WINDOWS_PHONE
             return IsolatedStorageSettings.ApplicationSettings.Contains(key);
             #endif
+            #if WIN_RT
+            return ApplicationData.Current.RoamingSettings.Values.ContainsKey(key);
+            #endif
         }
 
         static public string ReadResourceString(string key)
         {
             #if WINDOWS_PHONE
             return Resources.ResourceManager.GetString(key);
+            #endif
+            #if WIN_RT
+            if (resourceLoader == null) { resourceLoader = new ResourceLoader(); }
+            return resourceLoader.GetString(key);
             #endif
         }
 
@@ -46,20 +69,21 @@ namespace AppPromo
             #if WINDOWS_PHONE
             return (T)IsolatedStorageSettings.ApplicationSettings[key];
             #endif
+            #if WIN_RT
+            return (T)ApplicationData.Current.RoamingSettings.Values[key];
+            #endif
         }
 
         static public T ReadSetting<T>(string key, T defaultValue)
         {
-            #if WINDOWS_PHONE
             if (HasSetting(key))
             {
-                return (T)IsolatedStorageSettings.ApplicationSettings[key];
+                return ReadSetting<T>(key);
             }
             else
             {
                 return defaultValue;
             }
-            #endif
         }
 
         static public bool RemoveSetting(string key)
@@ -67,8 +91,13 @@ namespace AppPromo
             #if WINDOWS_PHONE
             var removed = IsolatedStorageSettings.ApplicationSettings.Remove(key);
             IsolatedStorageSettings.ApplicationSettings.Save();
-            return removed;
             #endif
+
+            #if WIN_RT
+            var removed = ApplicationData.Current.RoamingSettings.Values.Remove(key);
+            #endif
+
+            return removed;
         }
 
         static public async Task ShowRatingUI()
@@ -76,6 +105,10 @@ namespace AppPromo
             #if WINDOWS_PHONE
             var marketplaceReviewTask = new MarketplaceReviewTask(); 
             marketplaceReviewTask.Show(); 
+            #endif
+            #if WIN_RT
+            string familyName = Package.Current.Id.FamilyName; 
+            await Launcher.LaunchUriAsync(new Uri(string.Format("ms-windows-store:REVIEW?PFN={0}", familyName))); 
             #endif
         }
 
@@ -85,6 +118,9 @@ namespace AppPromo
             IsolatedStorageSettings.ApplicationSettings[key] = value;
             IsolatedStorageSettings.ApplicationSettings.Save();
             #endif
+            #if WIN_RT
+            ApplicationData.Current.RoamingSettings.Values[key] = value;
+            #endif
         }
 
         static public bool IsInDesignMode
@@ -93,6 +129,9 @@ namespace AppPromo
             {
                 #if WINDOWS_PHONE
                 return DesignerProperties.IsInDesignTool;
+                #endif
+                #if WIN_RT
+                return DesignMode.DesignModeEnabled;
                 #endif
             }
         }

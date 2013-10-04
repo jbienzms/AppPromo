@@ -10,6 +10,14 @@
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Es sieht aus wie Sie die app für eine Weile jetzt nutze, und wir freuen uns auf Ihre Kommentare zu hören. Möchten Sie die app bewerten oder Feedback geben?</target>
         </trans-unit>
+        <trans-unit translate="yes" id="AppPromo.Win8\Resources\Cancel" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abbrechen</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="AppPromo.Win8\Resources\OK" xml:space="preserve">
+          <source>OK</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Okay</target>
+        </trans-unit>
       </group>
     </body>
   </file>
