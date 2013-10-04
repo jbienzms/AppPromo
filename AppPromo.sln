@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppPromo.WP8", "AppPromo.WP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppPromo.Win8", "AppPromo.Win8\AppPromo.Win8.csproj", "{85D32FA1-98FC-4922-9CCD-8E6BB3D5F315}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.WP8", "Sample.WP8\Sample.WP8.csproj", "{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,26 @@ Global
 		{85D32FA1-98FC-4922-9CCD-8E6BB3D5F315}.Release|x64.Build.0 = Release|x64
 		{85D32FA1-98FC-4922-9CCD-8E6BB3D5F315}.Release|x86.ActiveCfg = Release|x86
 		{85D32FA1-98FC-4922-9CCD-8E6BB3D5F315}.Release|x86.Build.0 = Release|x86
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|ARM.ActiveCfg = Debug|ARM
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|ARM.Build.0 = Debug|ARM
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|ARM.Deploy.0 = Debug|ARM
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|x86.ActiveCfg = Debug|x86
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|x86.Build.0 = Debug|x86
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Debug|x86.Deploy.0 = Debug|x86
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|ARM.ActiveCfg = Release|ARM
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|ARM.Build.0 = Release|ARM
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|ARM.Deploy.0 = Release|ARM
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|x64.ActiveCfg = Release|Any CPU
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|x86.ActiveCfg = Release|x86
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|x86.Build.0 = Release|x86
+		{CDC74B0E-F044-4671-8CA7-D056F0C7CAF9}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

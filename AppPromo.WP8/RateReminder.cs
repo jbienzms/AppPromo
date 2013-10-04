@@ -21,7 +21,7 @@ namespace AppPromo
             return result == MessageBoxResult.OK;
             #endif
         }
-        
+
         static public bool HasSetting(string key)
         {
             #if WINDOWS_PHONE
@@ -57,6 +57,15 @@ namespace AppPromo
             #endif
         }
 
+        static public bool RemoveSetting(string key)
+        {
+            #if WINDOWS_PHONE
+            var removed = IsolatedStorageSettings.ApplicationSettings.Remove(key);
+            IsolatedStorageSettings.ApplicationSettings.Save();
+            return removed;
+            #endif
+        }
+
         static public async Task ShowRatingUI()
         {
             #if WINDOWS_PHONE
@@ -69,7 +78,18 @@ namespace AppPromo
         {
             #if WINDOWS_PHONE
             IsolatedStorageSettings.ApplicationSettings[key] = value;
+            IsolatedStorageSettings.ApplicationSettings.Save();
             #endif
+        }
+
+        static public bool IsInDesignMode
+        {
+            get
+            {
+                #if WINDOWS_PHONE
+                return DesignerProperties.IsInDesignTool;
+                #endif
+            }
         }
     }
 
@@ -81,16 +101,37 @@ namespace AppPromo
         /// <summary>
         /// Initializes a new <see cref="RateReminderResult"/>.
         /// </summary>
+        /// <param name="days">
+        /// The number of days that have passed since the app was installed.
+        /// </param>
+        /// <param name="runs">
+        /// The number of times the application has been run since it was installed.
+        /// </param>
         /// <param name="reminderShown">
         /// A value that indicates if a reminder was shown.
         /// </param>
         /// <param name="ratingShown">
         /// A value that indicates if the rating interface was shown.
         /// </param>
-        public RateReminderResult(bool reminderShown, bool ratingShown)
+        public RateReminderResult(int days, int runs, bool reminderShown, bool ratingShown)
         {
-
+            Days = days;
+            ReminderShown = reminderShown;
+            RatingShown = ratingShown;
+            Runs = runs;
         }
+
+        /// <summary>
+        /// Gets the number of days that have passed since the app was installed.
+        /// </summary>
+        /// <value>
+        /// The number of days that have passed since the app was installed.
+        /// </value>
+        /// <remarks>
+        /// This count is only calculated if the days reminder is enabled and hasn't already been shown. The count can be reset by calling 
+        /// the <see cref="ResetCounters">RateReminder.ResetCounters</see> method of the <see cref="RateReminder"/> control.
+        /// </remarks>
+        public int Days { get; private set; }
 
         /// <summary>
         /// Gets a value that indicates if a reminder was shown.
@@ -101,6 +142,18 @@ namespace AppPromo
         /// Gets a value that indicates if the rating interface was shown.
         /// </summary>
         public bool RatingShown { get; private set; }
+
+        /// <summary>
+        /// Gets the number of times the application has been run since it was installed.
+        /// </summary>
+        /// <value>
+        /// The number of times the application has been run since it was installed.
+        /// </value>
+        /// <remarks>
+        /// This count is only calculated if the runs reminder is enabled and hasn't already been shown. The count can be reset by calling 
+        /// the <see cref="ResetCounters">RateReminder.ResetCounters</see> method of the <see cref="RateReminder"/> control.
+        /// </remarks>
+        public int Runs { get; private set; }
     }
 
     public class RateReminder : Control
@@ -123,6 +176,11 @@ namespace AppPromo
         /// </summary>
         public RateReminder()
         {
+            // Defaults
+            RunsBeforeReminder = 7;
+            TryReminderOnLoad = true;
+
+            // Handle loaded
             this.Loaded += Control_Loaded;
         }
         #endregion // Constructors
@@ -204,31 +262,58 @@ namespace AppPromo
         }
         #endregion // Internal Methods
 
-        #region Overrides / Event Handlers
-        private void Control_Loaded(object sender, RoutedEventArgs e)
+        #region Overridables / Event Triggers
+        protected virtual void OnTryReminderCompleted(RateReminderResult e)
         {
-            // Try to show reminder
-            var t = TryShowReminder();
+            if (TryReminderCompleted != null) { TryReminderCompleted(this, e); }
+        }
+        #endregion // Overridables / Event Triggers
+
+        #region Overrides / Event Handlers
+        private async void Control_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Only attempt reminder if runtime, not design time
+            if (!PlatformHelper.IsInDesignMode)
+            {
+                // Try to show reminder?
+                if (TryReminderOnLoad)
+                {
+                    var t = await TryReminder();
+                }
+            }
         }
         #endregion // Overrides / Event Handlers
 
         #region Public Methods
+        /// <summary>
+        /// Resets the reminder counters and whether or not reminders have been shown.
+        /// </summary>
+        public void ResetCounters()
+        {
+            PlatformHelper.RemoveSetting(FIRST_RUN_KEY);
+            PlatformHelper.RemoveSetting(RUNS_COUNT_KEY);
+            PlatformHelper.RemoveSetting(SHOWN_FOR_RUNS_KEY);
+            PlatformHelper.RemoveSetting(SHOWN_FOR_DAYS_KEY);
+        }
+
         /// <summary>
         /// Checks to see whether it's time to show a reminder and if so, shows it.
         /// </summary>
         /// <returns>
         /// A task that yields the result, a <see cref="RateReminderResult"/>. 
         /// </returns>
-        public async Task<RateReminderResult> TryShowReminder()
+        public async Task<RateReminderResult> TryReminder()
         {
+            int runs = 0;
+            int days = 0;
             bool reminderShown = false;
             bool ratingShown = false;
 
-            // If the reminder has not been shown for runs, see if we need to show it
-            if (!PlatformHelper.ReadSetting<bool>(SHOWN_FOR_RUNS_KEY, false))
+            // If the runs reminder is enabled and has not been shown, see if we need to show it
+            if ((RunsBeforeReminder > 0) && (!PlatformHelper.ReadSetting<bool>(SHOWN_FOR_RUNS_KEY, false)))
             {
                 // How many runs so far?
-                int runs = GetRuns();
+                runs = GetRuns();
 
                 // Have we met the threshold?
                 if (runs >= RunsBeforeReminder)
@@ -242,11 +327,11 @@ namespace AppPromo
                 }
             }
 
-            // If the reminder has not been yet and it hasn't been shown for days, see if we need to show it
-            if ((!reminderShown) && (!PlatformHelper.ReadSetting<bool>(SHOWN_FOR_DAYS_KEY, false)))
+            // If no reminder has been shown, and if the days reminder is enabled but hasn't been shown, see if we need to show it
+            if ((!reminderShown) && (DaysBeforeReminder > 0) && (!PlatformHelper.ReadSetting<bool>(SHOWN_FOR_DAYS_KEY, false)))
             {
                 // How many days so far?
-                int days = GetDays();
+                days = GetDays();
 
                 // Have we met the threshold?
                 if (days >= DaysBeforeReminder)
@@ -260,7 +345,14 @@ namespace AppPromo
                 }
             }
 
-            return new RateReminderResult(reminderShown, ratingShown);
+            // Create result
+            var result = new RateReminderResult(days, runs, reminderShown, ratingShown);
+
+            // Notify
+            OnTryReminderCompleted(result);
+
+            // Return result
+            return result;
         }
         #endregion // Public Methods
 
@@ -297,10 +389,29 @@ namespace AppPromo
         /// The number of application runs before the reminder will be displayed. The default is 7.
         /// </value>
         /// <remarks>
-        /// Setting this property to zero (the default) will disable a reminder by days.
+        /// Setting this property to zero will disable a reminder by days.
         /// </remarks>
         [DefaultValue(7)]
         public int RunsBeforeReminder { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value that indicates if the control should try to show the reminer as soon as it's loaded.
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if the control should try to show the reminer as soon as it's loaded; otherwise <c>false</c>. The default is <c>true</c>.
+        /// </value>
+        /// <remarks>
+        /// If this member is set to false you must call <see cref="TryReminder"/> to show the reminder.
+        /// </remarks>
+        [DefaultValue(true)]
+        public bool TryReminderOnLoad { get; set; }
         #endregion // Public Properties
+
+        #region Public Events
+        /// <summary>
+        /// Occurs when the <see cref="TryReminder"/> method has completed.
+        /// </summary>
+        public event EventHandler<RateReminderResult> TryReminderCompleted;
+        #endregion // Public Events
     }
 }
