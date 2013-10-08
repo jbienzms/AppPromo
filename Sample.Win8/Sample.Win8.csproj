@@ -148,10 +148,124 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_qps-ploc.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_ar.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_bg-BG.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_ca-ES.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_zh-Hans.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_zh-Hant.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_cs-CZ.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_da-DK.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_nl.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_en.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_et-EE.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_fi-FI.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_fr.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_de.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_el-GR.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_he-IL.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_hi-IN.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_hu-HU.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_id-ID.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_it.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_ja-JP.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_ko-KR.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_lv-LV.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_lt-LT.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_nb-NO.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_pl-PL.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_pt.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_ru-RU.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_sk-SK.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_sl-SI.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_es.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_sv.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_th-TH.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_tr-TR.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_uk-UA.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\Sample.Win8_vi-VN.xlf" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <ToolkitRevision>2</ToolkitRevision>
+    <MakePriLog>$(Temp)\$(MSBuildProjectName)_Multilingual.prilog.xml</MakePriLog>
+    <AppxGenerateProjectPriFileAdditionalMakepriExeParameters>/IndexLog "$(MakePriLog)"</AppxGenerateProjectPriFileAdditionalMakepriExeParameters>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.WindowsStore.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.WindowsStore.targets')" Label="MultilingualAppToolkit" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
