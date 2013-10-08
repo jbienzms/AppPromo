@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>AppPromo.Win8</id>
+        <version>1.0.0.2</version>
+        <title>App Promo for Windows 8</title>
+        <authors>jbienzms,toolboc (pdecarlo)</authors>
+        <owners>toolboc (pdecarlo)</owners>
+        <projectUrl>https://github.com/jbienzms/AppPromo</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Easy to use control available for Windows Phone and Windows 8 that gives ability to prompt users for app rating / feedback based on configurable properties.</description>
+        <summary>Easily obtain app ratings / feedback from your Windows Phone and Windows 8 users!  Supports over 25 languages out the box!</summary>
+        <tags>Windows 8, Store, controls, rating, feedback</tags>
+    </metadata>
+    <files>
+        <file src="lib\winrt45\AppPromo.Win8.dll" target="lib\winrt45\AppPromo.Win8.dll" />
+        <file src="lib\winrt45\AppPromo.Win8.pri" target="lib\winrt45\AppPromo.Win8.pri" />
+    </files>
+</package>
