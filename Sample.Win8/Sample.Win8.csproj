@@ -125,9 +125,15 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="..\License\AppPromo.licenseheader">
+      <Link>AppPromo.licenseheader</Link>
+    </None>
     <None Include="Sample.Win8_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\License\MS-LPL License.txt">
+      <Link>MS-LPL License.txt</Link>
+    </Content>
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />

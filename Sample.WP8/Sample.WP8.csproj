@@ -117,12 +117,18 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\License\AppPromo.licenseheader">
+      <Link>AppPromo.licenseheader</Link>
+    </None>
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\License\MS-LPL License.txt">
+      <Link>MS-LPL License.txt</Link>
+    </Content>
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

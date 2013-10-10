@@ -109,6 +109,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\AppFactory\License\AppFactory.licenseheader">
+      <Link>AppFactory.licenseheader</Link>
+    </None>
     <None Include="MultilingualResources\AppPromo.Win8_qps-ploc.xlf" />
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +218,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="MultilingualResources\AppPromo.Win8_vi-VN.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\AppFactory\License\MS-LPL License.txt">
+      <Link>MS-LPL License.txt</Link>
+    </Content>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
