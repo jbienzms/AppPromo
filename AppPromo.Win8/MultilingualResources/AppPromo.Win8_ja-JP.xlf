@@ -5,18 +5,18 @@
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.0.1000.0" tool-company="Microsoft" />
     </header>
     <body>
-      <group id="AppPromo.Win8">
-        <trans-unit translate="yes" id="AppPromo.Win8\Resources\RateAppPrompt" xml:space="preserve">
-          <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">あなたはしばらくの間、今アプリを使用しているし、我々 のコメントを聞くが大好きみたい。アプリを評価またはフィードバックを提供する希望ですか？</target>
-        </trans-unit>
-        <trans-unit translate="yes" id="AppPromo.Win8\Resources\Cancel" xml:space="preserve">
+      <group id="AppPromo">
+        <trans-unit translate="yes" id="AppPromo\Resources\Cancel" xml:space="preserve">
           <source>Cancel</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">キャンセル</target>
+          <target state="new">Cancel</target>
         </trans-unit>
-        <trans-unit translate="yes" id="AppPromo.Win8\Resources\OK" xml:space="preserve">
+        <trans-unit translate="yes" id="AppPromo\Resources\OK" xml:space="preserve">
           <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">わかりました</target>
+          <target state="new">OK</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="AppPromo\Resources\RateAppPrompt" xml:space="preserve">
+          <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
+          <target state="new">It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</target>
         </trans-unit>
       </group>
     </body>
