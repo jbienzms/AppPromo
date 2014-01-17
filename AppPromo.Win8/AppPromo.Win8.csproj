@@ -7,10 +7,10 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{85D32FA1-98FC-4922-9CCD-8E6BB3D5F315}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>winmdobj</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AppPromo</RootNamespace>
-    <AssemblyName>AppPromo.Win8</AssemblyName>
+    <AssemblyName>AppPromo</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -103,6 +103,9 @@
     <PRIResource Include="en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AppPromo.WP8\RateHelper.cs">
+      <Link>RateHelper.cs</Link>
+    </Compile>
     <Compile Include="..\AppPromo.WP8\RateReminder.cs">
       <Link>RateReminder.cs</Link>
     </Compile>
@@ -231,6 +234,9 @@
     <ToolkitRevision>2</ToolkitRevision>
     <MakePriLog>$(Temp)\$(MSBuildProjectName)_Multilingual.prilog.xml</MakePriLog>
     <AppxGenerateProjectPriFileAdditionalMakepriExeParameters>/IndexLog "$(MakePriLog)"</AppxGenerateProjectPriFileAdditionalMakepriExeParameters>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.WindowsStore.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.WindowsStore.targets')" Label="MultilingualAppToolkit" />

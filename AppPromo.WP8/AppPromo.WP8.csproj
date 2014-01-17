@@ -87,8 +87,11 @@
     <ToolkitRevision>2</ToolkitRevision>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="RateReminder.cs" />
+    <Compile Include="RateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RateReminder.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
