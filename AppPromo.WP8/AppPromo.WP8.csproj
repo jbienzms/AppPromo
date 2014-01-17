@@ -463,6 +463,16 @@
       <LastGenOutput>Resources.zh-Hant.resx</LastGenOutput>
     </XliffResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\License\AppPromo.licenseheader">
+      <Link>AppPromo.licenseheader</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\License\MS-LPL License.txt">
+      <Link>MS-LPL License.txt</Link>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.WindowsPhone.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.WindowsPhone.targets')" Label="MultilingualAppToolkitForWindowsPhone" />
