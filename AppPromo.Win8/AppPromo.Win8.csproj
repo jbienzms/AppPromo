@@ -222,9 +222,9 @@
     <None Include="MultilingualResources\AppPromo.Win8_vi-VN.xlf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\AppPromo\License\MS-LPL License.txt">
+    <None Include="..\..\AppPromo\License\MS-LPL License.txt">
       <Link>MS-LPL License.txt</Link>
-    </Content>
+    </None>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
