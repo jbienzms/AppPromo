@@ -2,18 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>AppPromo.Win8</id>
-        <version>1.0.0.2</version>
+        <version>1.0.0.5</version>
         <title>App Promo for Windows 8</title>
         <authors>jbienzms,toolboc (pdecarlo)</authors>
         <owners>toolboc (pdecarlo)</owners>
         <projectUrl>https://github.com/jbienzms/AppPromo</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Easy to use control available for Windows Phone and Windows 8 that gives ability to prompt users for app rating / feedback based on configurable properties.</description>
-        <summary>Easily obtain app ratings / feedback from your Windows Phone and Windows 8 users!  Supports over 25 languages out the box!</summary>
+        <summary>Easily obtain app ratings / feedback from your Windows Phone and Windows 8 users!  Supports over 25 languages out the box!  Support WinJS, C++, and C# Store Projects!</summary>
         <tags>Windows 8, Store, controls, rating, feedback</tags>
     </metadata>
     <files>
-        <file src="lib\winrt45\AppPromo.Win8.dll" target="lib\winrt45\AppPromo.Win8.dll" />
-        <file src="lib\winrt45\AppPromo.Win8.pri" target="lib\winrt45\AppPromo.Win8.pri" />
+        <file src="..\..\AppPromo.Win8\bin\Debug\AppPromo.pdb" target="lib\winrt45\AppPromo.pdb" />
+        <file src="..\..\AppPromo.Win8\bin\Debug\AppPromo.pri" target="lib\winrt45\AppPromo.pri" />
+        <file src="..\..\AppPromo.Win8\bin\Debug\AppPromo.winmd" target="lib\winrt45\AppPromo.winmd" />
     </files>
 </package>
