@@ -112,8 +112,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\AppFactory\License\AppFactory.licenseheader">
-      <Link>AppFactory.licenseheader</Link>
+    <None Include="..\..\AppPromo\License\AppPromo.licenseheader">
+      <Link>AppPromo.licenseheader</Link>
     </None>
     <None Include="MultilingualResources\AppPromo.Win8_qps-ploc.xlf" />
   </ItemGroup>
@@ -223,7 +223,7 @@
     <None Include="MultilingualResources\AppPromo.Win8_vi-VN.xlf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\AppFactory\License\MS-LPL License.txt">
+    <Content Include="..\..\AppPromo\License\MS-LPL License.txt">
       <Link>MS-LPL License.txt</Link>
     </Content>
   </ItemGroup>
