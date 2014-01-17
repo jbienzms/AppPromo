@@ -115,7 +115,6 @@
     <None Include="..\..\AppPromo\License\AppPromo.licenseheader">
       <Link>AppPromo.licenseheader</Link>
     </None>
-    <None Include="MultilingualResources\AppPromo.Win8_qps-ploc.xlf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MultilingualResources\AppPromo.Win8_ar.xlf" />

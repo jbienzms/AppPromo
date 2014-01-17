@@ -18,7 +18,7 @@
     <ValidateXaml>true</ValidateXaml>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
-    <SupportedCultures>ar;bg-BG;ca-ES;cs-CZ;da-DK;de;el-GR;en;es;et-EE;fi-FI;fr;he-IL;hi-IN;hu-HU;id-ID;it;ja-JP;ko-KR;lt-LT;lv-LV;nb-NO;nl;pl-PL;pt;qps-ploc;ru-RU;sk-SK;sl-SI;sv;th-TH;tr-TR;uk-UA;vi-VN;zh-Hans;zh-Hant</SupportedCultures>
+    <SupportedCultures>ar;bg-BG;ca-ES;cs-CZ;da-DK;de;el-GR;en;es;et-EE;fi-FI;fr;he-IL;hi-IN;hu-HU;id-ID;it;ja-JP;ko-KR;lt-LT;lv-LV;nb-NO;nl;pl-PL;pt;ru-RU;sk-SK;sl-SI;sv;th-TH;tr-TR;uk-UA;vi-VN;zh-Hans;zh-Hant</SupportedCultures>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -249,12 +249,6 @@
       <DependentUpon>Resources.pt.xlf</DependentUpon>
       <culture>pt</culture>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources.qps-ploc.resx">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.qps-ploc.xlf</DependentUpon>
-      <culture>qps-ploc</culture>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -420,10 +414,6 @@
     <XliffResource Include="Resources.pt.xlf">
       <Generator>XliffResxGenerator</Generator>
       <LastGenOutput>Resources.pt.resx</LastGenOutput>
-    </XliffResource>
-    <XliffResource Include="Resources.qps-ploc.xlf">
-      <Generator>XliffResxGenerator</Generator>
-      <LastGenOutput>Resources.qps-ploc.resx</LastGenOutput>
     </XliffResource>
     <XliffResource Include="Resources.ru-RU.xlf">
       <Generator>XliffResxGenerator</Generator>
