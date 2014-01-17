@@ -149,9 +149,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MultilingualResources\SampleCS.Win8_qps-ploc.xlf" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="MultilingualResources\SampleCS.Win8_ar.xlf" />
   </ItemGroup>
   <ItemGroup>
