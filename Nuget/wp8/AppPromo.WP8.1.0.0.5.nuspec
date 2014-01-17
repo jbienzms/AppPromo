@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>AppPromo.WP8</id>
+        <version>1.0.0.5</version>
+        <title>App Promo for Windows Phone 8</title>
+        <authors>jbienzms,toolboc (pdecarlo)</authors>
+        <owners>toolboc (pdecarlo)</owners>
+        <projectUrl>https://github.com/jbienzms/AppPromo</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Easy to use control available for Windows Phone and Windows 8 that gives ability to prompt users for app rating / feedback based on configurable properties.</description>
+        <summary>Easily obtain app ratings / feedback from your Windows Phone and Windows 8 users!  Supports over 25 languages out the box!</summary>
+        <tags>WP8, Windows Phone, Phone 8, Store, controls, rating, feedback</tags>
+    </metadata>
+    <files>
+        <file src="lib\wp8\ar\AppPromo.WP8.resources.dll" target="lib\wp8\ar\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\bg-BG\AppPromo.WP8.resources.dll" target="lib\wp8\bg-BG\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\ca-ES\AppPromo.WP8.resources.dll" target="lib\wp8\ca-ES\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\cs-CZ\AppPromo.WP8.resources.dll" target="lib\wp8\cs-CZ\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\da-DK\lv-LV\AppPromo.WP8.resources.dll" target="lib\wp8\da-DK\lv-LV\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\da-DK\AppPromo.WP8.resources.dll" target="lib\wp8\da-DK\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\de\AppPromo.WP8.resources.dll" target="lib\wp8\de\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\el-GR\AppPromo.WP8.resources.dll" target="lib\wp8\el-GR\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\en\AppPromo.WP8.resources.dll" target="lib\wp8\en\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\es\AppPromo.WP8.resources.dll" target="lib\wp8\es\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\et-EE\AppPromo.WP8.resources.dll" target="lib\wp8\et-EE\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\fi-FI\AppPromo.WP8.resources.dll" target="lib\wp8\fi-FI\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\fr\AppPromo.WP8.resources.dll" target="lib\wp8\fr\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\he-IL\AppPromo.WP8.resources.dll" target="lib\wp8\he-IL\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\hi-IN\AppPromo.WP8.resources.dll" target="lib\wp8\hi-IN\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\hu-HU\AppPromo.WP8.resources.dll" target="lib\wp8\hu-HU\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\id-ID\AppPromo.WP8.resources.dll" target="lib\wp8\id-ID\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\it\AppPromo.WP8.resources.dll" target="lib\wp8\it\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\ja-JP\AppPromo.WP8.resources.dll" target="lib\wp8\ja-JP\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\ko-KR\AppPromo.WP8.resources.dll" target="lib\wp8\ko-KR\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\nb-NO\AppPromo.WP8.resources.dll" target="lib\wp8\nb-NO\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\nl\AppPromo.WP8.resources.dll" target="lib\wp8\nl\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\pl-PL\AppPromo.WP8.resources.dll" target="lib\wp8\pl-PL\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\pt\AppPromo.WP8.resources.dll" target="lib\wp8\pt\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\ru-RU\AppPromo.WP8.resources.dll" target="lib\wp8\ru-RU\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\sk-SK\AppPromo.WP8.resources.dll" target="lib\wp8\sk-SK\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\sl-SI\AppPromo.WP8.resources.dll" target="lib\wp8\sl-SI\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\sv\AppPromo.WP8.resources.dll" target="lib\wp8\sv\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\th-TH\AppPromo.WP8.resources.dll" target="lib\wp8\th-TH\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\tr-TR\AppPromo.WP8.resources.dll" target="lib\wp8\tr-TR\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\uk-UA\AppPromo.WP8.resources.dll" target="lib\wp8\uk-UA\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\vi-VN\AppPromo.WP8.resources.dll" target="lib\wp8\vi-VN\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\zh-Hans\AppPromo.WP8.resources.dll" target="lib\wp8\zh-Hans\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\zh-Hant\lt-LT\AppPromo.WP8.resources.dll" target="lib\wp8\zh-Hant\lt-LT\AppPromo.WP8.resources.dll" />
+        <file src="lib\wp8\zh-Hant\AppPromo.WP8.resources.dll" target="lib\wp8\zh-Hant\AppPromo.WP8.resources.dll" />
+        <file src="..\..\AppPromo.WP8\Bin\Debug\AppPromo.WP8.dll" target="lib\wp8\AppPromo.WP8.dll" />
+        <file src="..\..\AppPromo.WP8\Bin\Debug\AppPromo.WP8.pdb" target="lib\wp8\AppPromo.WP8.pdb" />
+    </files>
+</package>
