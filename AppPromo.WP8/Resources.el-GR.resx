@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RateAppPrompt" xml:space="preserve">
-    <value>Φαίνεται ότι έχετε χρησιμοποιήσει το app για λίγο τώρα, και θα θέλαμε να ακούσουμε τις παρατηρήσεις σας. Θα θέλατε να ποσοστό το app ή να παρέχει ανατροφοδότηση;</value>
+    <value>Φαίνεται ότι έχετε χρησιμοποιήσει την εφαρμογή αρκετά και θα θέλαμε να ακούσουμε τις παρατηρήσεις σας. Θα θέλατε να την βαθμολογήσετε ή να στείλετε τα σχόλιά σας;</value>
   </data>
 </root>
