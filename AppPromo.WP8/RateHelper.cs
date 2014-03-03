@@ -62,8 +62,19 @@ namespace AppPromo
             var dlg = new MessageDialog(message, title);
             dlg.Commands.Add(new UICommand(ReadResourceString("OK"), null, true));
             dlg.Commands.Add(new UICommand(ReadResourceString("Cancel"), null, false));
-            var cmd = await dlg.ShowAsync();
-            return (bool)cmd.Id;
+            
+			var result = false;
+
+			try
+			{
+				result = (bool)(await dlg.ShowAsync()).Id;
+			}
+			catch (Exception)
+			{
+				//	this may happen if any other modal window is shown at the moment (ie, Windows query about running application background task)
+			}
+
+			return result;
             #endif
         }
         #pragma warning restore 1998
