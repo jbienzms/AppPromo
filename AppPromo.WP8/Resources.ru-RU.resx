@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RateAppPrompt" xml:space="preserve">
-    <value>Это выглядит как вы используете app на некоторое время теперь и мы будем рады услышать ваши комментарии. Вы хотите оценить app или предоставлять обратную связь?</value>
+    <value>Похоже, вы использовали приложение некоторое время, и мы хотели бы услышать ваши комментарии. Хотели бы вы оценить приложение или оставить отзыв?</value>
   </data>
 </root>

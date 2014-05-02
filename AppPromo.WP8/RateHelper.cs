@@ -42,6 +42,7 @@ using Windows.System;
 using Windows.ApplicationModel;
 using Windows.Foundation;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Store;
 #endif
 
 namespace AppPromo
@@ -144,8 +145,7 @@ namespace AppPromo
             marketplaceReviewTask.Show(); 
             #endif
             #if WIN_RT
-            string familyName = Package.Current.Id.FamilyName; 
-            await Launcher.LaunchUriAsync(new Uri(string.Format("ms-windows-store:REVIEW?PFN={0}", familyName))); 
+            await Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" + CurrentApp.AppId));
             #endif
         }
         #pragma warning restore 1998

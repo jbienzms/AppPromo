@@ -2,21 +2,21 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="ru-RU" original="AppPromo.Win8_Multilingual.prilog.xml" tool-id="MultilingualAppToolkit" product-name="AppPromo.Win8" product-version="1.0.0.0" build-num="0">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.2010.0" tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.0.1200.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="AppPromo">
         <trans-unit translate="yes" id="AppPromo\Resources\Cancel" xml:space="preserve">
           <source>Cancel</source>
-          <target state="new">Cancel</target>
+          <target state="signed-off" state-qualifier="tm-suggestion">Отмена</target>
         </trans-unit>
         <trans-unit translate="yes" id="AppPromo\Resources\OK" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="translated" state-qualifier="tm-suggestion">ОК</target>
         </trans-unit>
         <trans-unit translate="yes" id="AppPromo\Resources\RateAppPrompt" xml:space="preserve">
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
-          <target state="new">It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</target>
+          <target state="translated">Похоже, вы использовали приложение некоторое время, и мы хотели бы услышать ваши комментарии. Хотели бы вы оценить приложение или оставить отзыв?</target>
         </trans-unit>
       </group>
     </body>
