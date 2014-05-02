@@ -247,11 +247,23 @@ namespace AppPromo
     public sealed class RateHelper
     {
         #region Constants
-        private const string FIRST_RUN_KEY = "RateFirstRun";
         private const string MESSAGE_KEY = "RateAppPrompt";
+        #if WINDOWS_PHONE_APP
+        private const string FIRST_RUN_KEY = "WP.RateFirstRun";
+        private const string RUNS_COUNT_KEY = "WP.RateRunsCount";
+        private const string SHOWN_FOR_DAYS_KEY = "WP.RateShownForDays";
+        private const string SHOWN_FOR_RUNS_KEY = "WP.RateShownForRuns";
+        #elif WINDOWS_APP
+        private const string FIRST_RUN_KEY = "W8.RateFirstRun";
+        private const string RUNS_COUNT_KEY = "W8.RateRunsCount";
+        private const string SHOWN_FOR_DAYS_KEY = "W8.RateShownForDays";
+        private const string SHOWN_FOR_RUNS_KEY = "W8.RateShownForRuns";
+        #else
+        private const string FIRST_RUN_KEY = "RateFirstRun";
         private const string RUNS_COUNT_KEY = "RateRunsCount";
         private const string SHOWN_FOR_DAYS_KEY = "RateShownForDays";
         private const string SHOWN_FOR_RUNS_KEY = "RateShownForRuns";
+        #endif
         #endregion // Constants
 
         #region Member Variables

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>AppPromo</id>
-        <version>1.0.0.7</version>
+        <version>1.0.0.9</version>
         <title>App Promo for Windows Phone and Windows 8</title>
         <authors>jbienzms,toolboc (pdecarlo)</authors>
         <owners>jbienzms</owners>
@@ -10,15 +10,15 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Easy to use control available for Windows Phone and Windows 8 that gives ability to prompt users for app rating / feedback based on configurable properties.</description>
         <summary>Easily obtain app ratings / feedback from your Windows Phone and Windows 8 users.  Supports over 25 languages out the box.  Support for WinJS, C++, and C# Store Projects!</summary>
-        <releaseNotes>Fixed a bug that caused issues with showing the proper store page in Windows Phone Store Apps on 8.1.
+        <releaseNotes>Fixed a bug that caused reminder text to show up blank after the switch to separate winmds for Universal Apps.
 
 This package now includes all target plaforms in a single nuget package. The previous, separate packages will no longer be maintained.</releaseNotes>
         <tags>Windows 8, Store, controls, rating, feedback</tags>
     </metadata>
     <files>
-        <file src="..\AppPromo.Win8\bin\Release\AppPromo.pdb" target="lib\netcore45\AppPromo.pdb" />
-        <file src="..\AppPromo.Win8\bin\Release\AppPromo.pri" target="lib\netcore45\AppPromo.pri" />
-        <file src="..\AppPromo.Win8\bin\Release\AppPromo.winmd" target="lib\netcore45\AppPromo.winmd" />
+        <file src="..\AppPromo.Win8\bin\WindowsRelease\AppPromo.pdb" target="lib\netcore45\AppPromo.pdb" />
+        <file src="..\AppPromo.Win8\bin\WindowsRelease\AppPromo.pri" target="lib\netcore45\AppPromo.pri" />
+        <file src="..\AppPromo.Win8\bin\WindowsRelease\AppPromo.winmd" target="lib\netcore45\AppPromo.winmd" />
         <file src="..\AppPromo.WP8\Bin\Release\ar\AppPromo.WP8.resources.dll" target="lib\wp8\ar\AppPromo.WP8.resources.dll" />
         <file src="..\AppPromo.WP8\Bin\Release\bg-BG\AppPromo.WP8.resources.dll" target="lib\wp8\bg-BG\AppPromo.WP8.resources.dll" />
         <file src="..\AppPromo.WP8\Bin\Release\ca-ES\AppPromo.WP8.resources.dll" target="lib\wp8\ca-ES\AppPromo.WP8.resources.dll" />
@@ -56,8 +56,8 @@ This package now includes all target plaforms in a single nuget package. The pre
         <file src="..\AppPromo.WP8\Bin\Release\zh-Hant\AppPromo.WP8.resources.dll" target="lib\wp8\zh-Hant\AppPromo.WP8.resources.dll" />
         <file src="..\AppPromo.WP8\Bin\Release\AppPromo.WP8.dll" target="lib\wp8\AppPromo.WP8.dll" />
         <file src="..\AppPromo.WP8\Bin\Release\AppPromo.WP8.pdb" target="lib\wp8\AppPromo.WP8.pdb" />
-        <file src="..\AppPromo.Win8\bin\Release\AppPromo.pdb" target="lib\wpa81\AppPromo.pdb" />
-        <file src="..\AppPromo.Win8\bin\Release\AppPromo.pri" target="lib\wpa81\AppPromo.pri" />
-        <file src="..\AppPromo.Win8\bin\Release\AppPromo.winmd" target="lib\wpa81\AppPromo.winmd" />
+        <file src="..\AppPromo.Win8\bin\WindowsPhoneRelease\AppPromo.pdb" target="lib\wpa81\AppPromo.pdb" />
+        <file src="..\AppPromo.Win8\bin\WindowsPhoneRelease\AppPromo.pri" target="lib\wpa81\AppPromo.pri" />
+        <file src="..\AppPromo.Win8\bin\WindowsPhoneRelease\AppPromo.winmd" target="lib\wpa81\AppPromo.winmd" />
     </files>
 </package>
