@@ -22,6 +22,6 @@
     <value>Myöhemmin</value>
   </data>
   <data name="RateAppPrompt" xml:space="preserve">
-    <value>Ilmeisesti olet käyttänyt sovellus jonkin aikaa nyt, ja Toivottavasti kuulla kommenttisi. Haluatko antaa palautetta ja arvioi app?</value>
+    <value>Näyttää siltä kun olisit käyttänyt sovelluksen jonkin aikaa nyt ja haluaisimme kuulla mielipiteesi. Haluisitko antaa arvosanan tai antaa palautetta?</value>
   </data>
 </root>

@@ -22,6 +22,6 @@
     <value>Később</value>
   </data>
   <data name="RateAppPrompt" xml:space="preserve">
-    <value>Úgy néz ki már használta az alkalmazás egy ideig most és a Megjelenés frakkban hallani a megjegyzéseket. Az alkalmazás gyakorisága, vagy visszajelzést?</value>
+    <value>Úgy tűnik, egy ideje már használja a programot, és mi szeretnénk megismerni a véleményét. Szeretné értékelni a programot vagy visszajelzést küldeni?</value>
   </data>
 </root>

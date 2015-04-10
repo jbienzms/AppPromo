@@ -1,0 +1,75 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sample.UAP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:AppPromo="using:AppPromo"
+    x:Class="Sample.UAP.MainPage"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Thickness x:Key="SectionPadding">30</Thickness>
+        <Thickness x:Key="FieldPadding">0,5,15,5</Thickness>
+    </Page.Resources>
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <AppPromo:RateReminder x:Name="RateReminder" TryReminderCompleted="RateReminder_TryReminderCompleted" RunsBeforeReminder="3" DaysBeforeReminder="2" />
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="24" Grid.RowSpan="2">
+            	<Run Text="This sample will display a reminder after 3 runs (default is 7) and after 2 days (default is 0 - disabled)."/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="The counters to the right show how much time has passed and whether any UI was shown. The reset button can be used to clear the counters stored on the device."/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="NOTE: Counters will read 0 after the corresponding reminder has been shown."/>
+            </TextBlock>
+            <StackPanel Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+                <Button x:Name="ResetCountersButton" Content="Reset Counters" Click="ResetCountersButton_Click" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <CompositeTransform ScaleX="1.5" ScaleY="1.5"/>
+                    </Button.RenderTransform>
+                </Button>
+                <TextBlock x:Name="ResetBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0" Foreground="Red"/>
+            </StackPanel>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <CompositeTransform ScaleX="2" ScaleY="2"/>
+                </Grid.RenderTransform>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Runs:" Padding="{StaticResource FieldPadding}"/>
+                <TextBlock Text="Days:" Grid.Row="1" Padding="{StaticResource FieldPadding}"/>
+                <TextBlock Text="Reminder:" Grid.Row="2" Padding="{StaticResource FieldPadding}"/>
+                <TextBlock Text="Rating:" Grid.Row="3" Padding="{StaticResource FieldPadding}"/>
+                <TextBlock x:Name="RunsLabel" Grid.Column="1" VerticalAlignment="Center"/>
+                <TextBlock x:Name="DaysLabel" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+                <TextBlock x:Name="ReminderLabel" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
+                <TextBlock x:Name="RatingLabel" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+</Page>
