@@ -33,7 +33,7 @@ using System.Windows;
 using System.Windows.Controls;
 #endif
 
-#if WIN_RT
+#if WIN_RT || WINDOWS_UAP
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -91,7 +91,8 @@ namespace AppPromo
                     #if WINDOWS_PHONE
                         var t = await rateHelper.TryReminderAsync();
                     #endif
-                    #if WIN_RT
+
+                    #if WIN_RT || WINDOWS_UAP
                         var t = await rateHelper.InnerTryReminderAsync();
                     #endif
                 }
@@ -117,7 +118,7 @@ namespace AppPromo
         /// </returns>
         public Task<RateReminderResult> TryReminderAsync()
         #endif
-        #if WIN_RT
+        #if WIN_RT || WINDOWS_UAP
         /// <summary>
         /// Checks to see whether it's time to show a reminder and if so, shows it.
         /// </summary>

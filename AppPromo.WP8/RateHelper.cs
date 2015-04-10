@@ -32,7 +32,7 @@ using System.IO.IsolatedStorage;
 using System.Windows;
 #endif
 
-#if WIN_RT
+#if WIN_RT || WINDOWS_UAP
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -47,28 +47,56 @@ using Windows.ApplicationModel.Store;
 
 namespace AppPromo
 {
+    /// <summary>
+    /// Potential responses to requesting an action.
+    /// </summary>
+    internal enum ActionResponse
+    {
+        /// <summary>
+        /// The action should be performed.
+        /// </summary>
+        Confirm,
+        /// <summary>
+        /// The action should not be performed and should never be requested again.
+        /// </summary>
+        Decline,
+        /// <summary>
+        /// The action should not be performed but may be requested again later.
+        /// </summary>
+        Delay
+    };
+
     internal static class PlatformHelper
     {
-        #if WIN_RT
+        #if WIN_RT || WINDOWS_UAP
         static private ResourceLoader resourceLoader;
         #endif
         #pragma warning disable 1998 // The async Task keeps the signature identical between platforms.
-        static public async Task<bool> AskOkCancel(string message, string title)
+        static public async Task<ActionResponse> AskAction(string message, string title)
         {
             #if WINDOWS_PHONE
             var result = MessageBox.Show(message, title, MessageBoxButton.OKCancel);
-            return result == MessageBoxResult.OK;
+            if  (result == MessageBoxResult.OK)
+            {
+                return ActionResponse.Confirm;
+            }
+            else
+            {
+                return ActionResponse.Decline;
+            }
             #endif
-            #if WIN_RT
+
+            #if WIN_RT || WINDOWS_UAP
             var dlg = new MessageDialog(message, title);
-            dlg.Commands.Add(new UICommand(ReadResourceString("OK"), null, true));
-            dlg.Commands.Add(new UICommand(ReadResourceString("Cancel"), null, false));
-            
-			var result = false;
+            dlg.Commands.Add(new UICommand(ReadResourceString("Confirm"), null, ActionResponse.Confirm));
+            dlg.Commands.Add(new UICommand(ReadResourceString("Decline"), null, ActionResponse.Decline));
+            dlg.Commands.Add(new UICommand(ReadResourceString("Delay"), null, ActionResponse.Delay));
+
+            var result = ActionResponse.Delay;
 
 			try
 			{
-				result = (bool)(await dlg.ShowAsync()).Id;
+				result = (ActionResponse)(await dlg.ShowAsync()).Id;
 			}
 			catch (Exception)
 			{
@@ -85,7 +113,8 @@ namespace AppPromo
             #if WINDOWS_PHONE
             return IsolatedStorageSettings.ApplicationSettings.Contains(key);
             #endif
-            #if WIN_RT
+
+            #if WIN_RT || WINDOWS_UAP
             return ApplicationData.Current.RoamingSettings.Values.ContainsKey(key);
             #endif
         }
@@ -95,8 +124,16 @@ namespace AppPromo
             #if WINDOWS_PHONE
             return Resources.ResourceManager.GetString(key);
             #endif
+
             #if WIN_RT
             if (resourceLoader == null) { resourceLoader = new ResourceLoader("AppPromo/Resources"); }
+            #endif
+
+            #if WINDOWS_UAP
+            if (resourceLoader == null) { resourceLoader = ResourceLoader.GetForCurrentView("AppPromo/Resources"); }
+            #endif
+
+            #if WIN_RT || WINDOWS_UAP
             return resourceLoader.GetString(key);
             #endif
         }
@@ -106,7 +143,8 @@ namespace AppPromo
             #if WINDOWS_PHONE
             return (T)IsolatedStorageSettings.ApplicationSettings[key];
             #endif
-            #if WIN_RT
+
+            #if WIN_RT || WINDOWS_UAP
             return (T)ApplicationData.Current.RoamingSettings.Values[key];
             #endif
         }
@@ -130,7 +168,7 @@ namespace AppPromo
             IsolatedStorageSettings.ApplicationSettings.Save();
             #endif
 
-            #if WIN_RT
+            #if WIN_RT || WINDOWS_UAP
             var removed = ApplicationData.Current.RoamingSettings.Values.Remove(key);
             #endif
 
@@ -144,7 +182,8 @@ namespace AppPromo
             var marketplaceReviewTask = new MarketplaceReviewTask(); 
             marketplaceReviewTask.Show(); 
             #endif
-            #if WIN_RT
+
+            #if WIN_RT || WINDOWS_UAP
             await Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" + CurrentApp.AppId));
             #endif
         }
@@ -156,7 +195,8 @@ namespace AppPromo
             IsolatedStorageSettings.ApplicationSettings[key] = value;
             IsolatedStorageSettings.ApplicationSettings.Save();
             #endif
-            #if WIN_RT
+
+            #if WIN_RT || WINDOWS_UAP
             ApplicationData.Current.RoamingSettings.Values[key] = value;
             #endif
         }
@@ -168,7 +208,8 @@ namespace AppPromo
                 #if WINDOWS_PHONE
                 return DesignerProperties.IsInDesignTool;
                 #endif
-                #if WIN_RT
+
+                #if WIN_RT || WINDOWS_UAP
                 return DesignMode.DesignModeEnabled;
                 #endif
             }
@@ -195,12 +236,16 @@ namespace AppPromo
         /// <param name="ratingShown">
         /// A value that indicates if the rating interface was shown.
         /// </param>
-        public RateReminderResult(int days, int runs, bool reminderShown, bool ratingShown)
+        /// <param name="delayed">
+        /// A value that indicates if the user chose to delay their raiting until another time.
+        /// </param>
+        public RateReminderResult(int days, int runs, bool reminderShown, bool ratingShown, bool delayed)
         {
             Days = days;
             ReminderShown = reminderShown;
             RatingShown = ratingShown;
             Runs = runs;
+            Delayed = delayed;
         }
 
         /// <summary>
@@ -214,6 +259,11 @@ namespace AppPromo
         /// the <see cref="ResetCounters">RateReminder.ResetCounters</see> method of the <see cref="RateReminder"/> control.
         /// </remarks>
         public int Days { get; private set; }
+
+        /// <summary>
+        /// Gets a value that indicates if the user chose to delay their raiting until another time.
+        /// </summary>
+        public bool Delayed { get; private set; }
 
         /// <summary>
         /// Gets a value that indicates if a reminder was shown on this attempt.
@@ -340,21 +390,21 @@ namespace AppPromo
         /// <returns>
         /// A task that yeilds the resut, <c>true</c> if the rating interface was shown; otherwise <c>false</c>.
         /// </returns>
-        private async Task<bool> ShowReminderAsync()
+        private async Task<ActionResponse> ShowReminderAsync()
         {
             // What message do we use?
             string msg = (!string.IsNullOrEmpty(CustomReminderText) ? CustomReminderText : PlatformHelper.ReadResourceString(MESSAGE_KEY));
 
             // Show the message
-            var ok = await PlatformHelper.AskOkCancel(msg, "");
+            var result = await PlatformHelper.AskAction(msg, "");
 
             // If it's OK to, show the rating window
-            if (ok)
+            if (result == ActionResponse.Confirm)
             {
                 await PlatformHelper.ShowRatingUI();
             }
 
-            return ok;
+            return result;
         }
         #endregion // Internal Methods
 
@@ -386,14 +436,14 @@ namespace AppPromo
         /// </returns>
         public async Task<RateReminderResult> TryReminderAsync()
         #endif
-        #if WIN_RT
+        #if WIN_RT || WINDOWS_UAP
         internal async Task<RateReminderResult> InnerTryReminderAsync()
         #endif
         {
             int runs = 0;
             int days = 0;
             bool reminderShown = false;
-            bool ratingShown = false;
+            ActionResponse ratingResponse = ActionResponse.Delay;
 
             // If the runs reminder is enabled and has not been shown, see if we need to show it
             if ((RunsBeforeReminder > 0) && (!PlatformHelper.ReadSetting<bool>(SHOWN_FOR_RUNS_KEY, false)))
@@ -405,11 +455,16 @@ namespace AppPromo
                 if (runs >= RunsBeforeReminder)
                 {
                     // Show the reminder
-                    ratingShown = await ShowReminderAsync();
+                    ratingResponse = await ShowReminderAsync();
 
-                    // Mark that it's been shown
+                    // Flag that it's been shown this run
                     reminderShown = true;
-                    PlatformHelper.WriteSetting<bool>(SHOWN_FOR_RUNS_KEY, true);
+
+                    // If the user didn't delay, mark it completed
+                    if (ratingResponse != ActionResponse.Delay)
+                    {
+                        PlatformHelper.WriteSetting<bool>(SHOWN_FOR_RUNS_KEY, true);
+                    }
                 }
             }
 
@@ -423,16 +478,21 @@ namespace AppPromo
                 if (days >= DaysBeforeReminder)
                 {
                     // Show the reminder
-                    ratingShown = await ShowReminderAsync();
+                    ratingResponse = await ShowReminderAsync();
 
-                    // Mark that it's been shown
+                    // Flag that it's been shown this run
                     reminderShown = true;
-                    PlatformHelper.WriteSetting<bool>(SHOWN_FOR_DAYS_KEY, true);
+
+                    // If the user didn't delay, mark it completed
+                    if (ratingResponse != ActionResponse.Delay)
+                    {
+                        PlatformHelper.WriteSetting<bool>(SHOWN_FOR_DAYS_KEY, true);
+                    }
                 }
             }
 
             // Create result
-            var result = new RateReminderResult(days, runs, reminderShown, ratingShown);
+            var result = new RateReminderResult(days, runs, reminderShown, (ratingResponse == ActionResponse.Confirm), (ratingResponse == ActionResponse.Delay));
 
             // Notify
             OnTryReminderCompleted(result);
@@ -441,7 +501,7 @@ namespace AppPromo
             return result;
         }
 
-        #if WIN_RT
+        #if WIN_RT || WINDOWS_UAP
         /// <summary>
         /// Checks to see whether it's time to show a reminder and if so, shows it.
         /// </summary>
