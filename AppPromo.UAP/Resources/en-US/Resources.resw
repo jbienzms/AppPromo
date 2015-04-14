@@ -126,6 +126,9 @@
   <data name="Delay" xml:space="preserve">
     <value>Later</value>
   </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>Don't remind me again</value>
+  </data>
   <data name="RateAppPrompt" xml:space="preserve">
     <value>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</value>
   </data>

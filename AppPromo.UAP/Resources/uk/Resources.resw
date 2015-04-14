@@ -24,4 +24,7 @@
   <data name="RateAppPrompt" xml:space="preserve">
     <value>Схоже, ви використовували програму на деякий час тепер, і ми будемо раді почути ваші коментарі. Оцініть програми або надати відгук?</value>
   </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>Більше не нагадувати</value>
+  </data>
 </root>

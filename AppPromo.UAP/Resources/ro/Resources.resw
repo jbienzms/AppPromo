@@ -24,4 +24,7 @@
   <data name="RateAppPrompt" xml:space="preserve">
     <value>Se pare ca ai fost folosind app pentru un while acum şi ne-ar plăcea să aud comentariile dumneavoastră. Doriţi să rata app sau de a oferi feedback-ul?</value>
   </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>Nu mi-amintesc din nou</value>
+  </data>
 </root>

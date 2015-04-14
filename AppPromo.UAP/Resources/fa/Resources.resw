@@ -24,4 +24,7 @@
   <data name="RateAppPrompt" xml:space="preserve">
     <value>به نظر می رسد مثل شما برنامه در حالی که در حال حاضر استفاده می کرده اید و ما دوست دارم به شنیدن نظرات خود را. شما می خواهم به سرعت نرم افزار یا ارائه پیشنهادات و انتقادات?</value>
   </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>دوباره یادآوری نشود</value>
+  </data>
 </root>

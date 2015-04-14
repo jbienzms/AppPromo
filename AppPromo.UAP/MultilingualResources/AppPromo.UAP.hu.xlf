@@ -22,6 +22,10 @@
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
           <target state="signed-off">Úgy tűnik, egy ideje már használja a programot, és mi szeretnénk megismerni a véleményét. Szeretné értékelni a programot vagy visszajelzést küldeni?</target>
         </trans-unit>
+        <trans-unit id="DontRemindAgain" translate="yes" xml:space="preserve">
+          <source>Don't remind me again</source>
+          <target state="translated" state-qualifier="tm-suggestion">Ne jelenjen meg több emlékeztető.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

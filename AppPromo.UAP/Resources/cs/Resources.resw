@@ -24,4 +24,7 @@
   <data name="RateAppPrompt" xml:space="preserve">
     <value>Zdá se kterým jste pracovali app na chvíli nyní a jsme rádi slyšet vaše komentáře. Chcete ohodnotit aplikace nebo názor?</value>
   </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>Tento dialog již příště nezobrazovat</value>
+  </data>
 </root>

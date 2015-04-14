@@ -117,6 +117,8 @@
     <None Include="..\License\AppPromo.licenseheader">
       <Link>AppPromo.licenseheader</Link>
     </None>
+    <PRIResource Include="Resources\nl-NL\Resources.resw" />
+    <PRIResource Include="Resources\nl-BE\Resources.resw" />
     <PRIResource Include="Resources\en-US\Resources.resw" />
     <PRIResource Include="Resources\vi\Resources.resw" />
     <PRIResource Include="Resources\uk\Resources.resw" />
@@ -164,6 +166,9 @@
     <Compile Include="..\AppPromo.WP8\RateReminder.cs">
       <Link>RateReminder.cs</Link>
     </Compile>
+    <Compile Include="Controls\ActionDialog.xaml.cs">
+      <DependentUpon>ActionDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +176,12 @@
       <Link>MS-LPL License.txt</Link>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Controls\ActionDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\AppPromo.UAP.ar.xlf" />
     <XliffResource Include="MultilingualResources\AppPromo.UAP.bg.xlf" />
@@ -199,6 +209,8 @@
     <XliffResource Include="MultilingualResources\AppPromo.UAP.lv.xlf" />
     <XliffResource Include="MultilingualResources\AppPromo.UAP.ms.xlf" />
     <XliffResource Include="MultilingualResources\AppPromo.UAP.nb.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UAP.nl-BE.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UAP.nl-NL.xlf" />
     <XliffResource Include="MultilingualResources\AppPromo.UAP.nl.xlf" />
     <XliffResource Include="MultilingualResources\AppPromo.UAP.pl.xlf" />
     <XliffResource Include="MultilingualResources\AppPromo.UAP.pt.xlf" />

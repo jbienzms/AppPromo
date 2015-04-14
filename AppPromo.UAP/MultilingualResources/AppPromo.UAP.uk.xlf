@@ -22,6 +22,10 @@
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Схоже, ви використовували програму на деякий час тепер, і ми будемо раді почути ваші коментарі. Оцініть програми або надати відгук?</target>
         </trans-unit>
+        <trans-unit id="DontRemindAgain" translate="yes" xml:space="preserve">
+          <source>Don't remind me again</source>
+          <target state="translated" state-qualifier="tm-suggestion">Більше не нагадувати</target>
+        </trans-unit>
       </group>
     </body>
   </file>

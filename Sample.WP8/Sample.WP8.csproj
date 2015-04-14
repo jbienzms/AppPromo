@@ -366,12 +366,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppPromo.WP8\AppPromo.WP8.csproj">
-      <Project>{6D48A778-9B03-49F4-B553-A5A9DF3E24AA}</Project>
-      <Name>AppPromo.WP8</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <XliffResource Include="Resources\AppResources.ar.xlf">
       <Generator>XliffResxGenerator</Generator>
       <LastGenOutput>AppResources.ar.resx</LastGenOutput>

@@ -43,6 +43,7 @@ using Windows.ApplicationModel;
 using Windows.Foundation;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Store;
+using AppPromo.Controls;
 #endif
 
 namespace AppPromo
@@ -66,11 +67,47 @@ namespace AppPromo
         Delay
     };
 
+    internal enum DeviceType
+    {
+        Unknown,
+        Mobile,
+        Desktop
+    };
+
     internal static class PlatformHelper
     {
         #if WIN_RT || WINDOWS_UAP
         static private ResourceLoader resourceLoader;
         #endif
+
+        static private DeviceType GetDeviceType()
+        {
+            #if WINDOWS_PHONE
+                return DeviceType.Mobile;
+            #elif WINDOWS_UAP
+                var qualifiers = Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().QualifierValues;
+                if (qualifiers.ContainsKey("DeviceFamily"))
+                {
+                    switch (qualifiers["DeviceFamily"])
+                    {
+                        case "Mobile":
+                            return DeviceType.Mobile;
+                        case "Desktop":
+                            return DeviceType.Desktop;
+                        default:
+                            return DeviceType.Unknown;
+                    }
+                }
+                else
+                {
+                    return DeviceType.Unknown;
+                }
+
+            #else
+                return DeviceType.Unknown; 
+            #endif
+        }
+
         #pragma warning disable 1998 // The async Task keeps the signature identical between platforms.
         static public async Task<ActionResponse> AskAction(string message, string title)
         {
@@ -87,23 +124,81 @@ namespace AppPromo
             #endif
 
             #if WIN_RT || WINDOWS_UAP
-            var dlg = new MessageDialog(message, title);
-            dlg.Commands.Add(new UICommand(ReadResourceString("Confirm"), null, ActionResponse.Confirm));
-            dlg.Commands.Add(new UICommand(ReadResourceString("Decline"), null, ActionResponse.Decline));
-            dlg.Commands.Add(new UICommand(ReadResourceString("Delay"), null, ActionResponse.Delay));
+            // Get device type
+            var deviceType = GetDeviceType();
 
-            var result = ActionResponse.Delay;
+            // If it's a mobile, use the ActionDialog
+            if (deviceType == DeviceType.Mobile)
+            {
+                // Create the action dialog
+                var ad = new ActionDialog();
 
-			try
-			{
-				result = (ActionResponse)(await dlg.ShowAsync()).Id;
-			}
-			catch (Exception)
-			{
-				//	this may happen if any other modal window is shown at the moment (ie, Windows query about running application background task)
-			}
+                // Setup text fields
+                ad.PromptText = message;
+                ad.ConfirmText = ReadResourceString("Confirm");
+                ad.DeclineText = ReadResourceString("Decline");
+                ad.DelayText = ReadResourceString("Delay");
+                ad.DontRemindAgainText = ReadResourceString("DontRemindAgain");
 
-			return result;
+                // Show and get result
+                var cdResult = await ad.ShowAsync();
+
+                // Convert CD result to ActionResult
+                if (cdResult == ContentDialogResult.Primary)
+                {
+                    return ActionResponse.Confirm;
+                }
+                else
+                {
+                    if (ad.DontRemindAgain)
+                    {
+                        return ActionResponse.Decline;
+                    }
+                    else
+                    {
+                        return ActionResponse.Delay;
+                    }
+                }
+            }
+            else // Not a mobile device
+            {
+                // Use MessageDialog
+                var dlg = new MessageDialog(message, title);
+
+                // Always show confirm
+                dlg.Commands.Add(new UICommand(ReadResourceString("Confirm"), null, ActionResponse.Confirm));
+
+                // If it's desktop we can add a delay (third) option
+                if (deviceType == DeviceType.Desktop)
+                {
+                    dlg.Commands.Add(new UICommand(ReadResourceString("Delay"), null, ActionResponse.Delay));
+                }
+
+                // Always show decline
+                dlg.Commands.Add(new UICommand(ReadResourceString("DontRemindAgain"), null, ActionResponse.Decline)); // "Decline"
+
+                // Enter will always trigger Accept
+                dlg.DefaultCommandIndex = 0;
+
+                // Escape will trigger Delay or Cancel (depending on whether delay is available)
+                dlg.CancelCommandIndex = 1;
+
+                // Placeholder response
+                var result = ActionResponse.Delay;
+
+                // Attempt to show the dialog
+                try
+                {
+                    result = (ActionResponse)(await dlg.ShowAsync()).Id;
+                }
+                catch (Exception)
+                {
+                    //	this may happen if any other modal window is shown at the moment (ie, Windows query about running application background task)
+                }
+
+                // Done
+                return result;
+            }
             #endif
         }
         #pragma warning restore 1998

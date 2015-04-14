@@ -24,4 +24,7 @@
   <data name="RateAppPrompt" xml:space="preserve">
     <value>ดูเหมือนว่าคุณได้ใช้โปรแกรมประยุกต์ชั่วขณะในขณะนี้ และเราอยากได้ยินข้อคิดเห็นของคุณ คุณต้องการโปรแกรมประยุกต์การจัดอันดับ หรือให้ผลป้อนกลับหรือไม่</value>
   </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>ไม่ต้องเตือนฉันอีก</value>
+  </data>
 </root>

@@ -24,4 +24,7 @@
   <data name="RateAppPrompt" xml:space="preserve">
     <value>使用したアプリを今すぐと積極的にコメントをお待ちするように見えます。アプリの評価やフィードバックを送信するもよろしいですか。</value>
   </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>今後このメッセージを表示しない</value>
+  </data>
 </root>

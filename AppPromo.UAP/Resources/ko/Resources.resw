@@ -24,4 +24,7 @@
   <data name="RateAppPrompt" xml:space="preserve">
     <value>사용 중인 응용 프로그램을 잠시 지금와 설명을 듣고 가입을 찾습니다. 응용 프로그램을 평가 하거나 피드백을 제공 하 시겠습니까?</value>
   </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>이 메시지를 다시 표시 안 함</value>
+  </data>
 </root>
