@@ -16,7 +16,7 @@
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     >
 
-    <Grid Width="300">
+    <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />

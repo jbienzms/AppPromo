@@ -100,10 +100,32 @@ namespace AppPromo.Controls
         public ActionDialog()
         {
             this.InitializeComponent();
+            this.Loaded += ActionDialog_Loaded;
+            this.Unloaded += ActionDialog_Unloaded;
         }
+
         #endregion // Constructors
 
+        private void HandleSizeChange(Size newSize)
+        {
+            // HACK for ContentDialog not showing at right size and not handling rotation properly
+            LayoutRoot.Width = Math.Max(newSize.Width - 50, 0);
+            LayoutRoot.Height = Math.Max(newSize.Height - 50, 0);
+        }
+
         #region Overrides / Event Handlers
+        private void ActionDialog_Loaded(object sender, RoutedEventArgs e)
+        {
+            Window.Current.SizeChanged += Window_SizeChanged;
+            var bounds = Window.Current.Bounds;
+            HandleSizeChange(new Size(bounds.Width, bounds.Height));
+        }
+
+        private void ActionDialog_Unloaded(object sender, RoutedEventArgs e)
+        {
+            Window.Current.SizeChanged -= Window_SizeChanged;
+        }
+
         private void ChkDontRemind_Checked(object sender, RoutedEventArgs e)
         {
             if (ChkDontRemind.IsChecked == true)
@@ -115,6 +137,10 @@ namespace AppPromo.Controls
                 SecondaryButtonText = DelayText;
             }
 
+        }
+        private void Window_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
+        {
+            HandleSizeChange(e.Size);
         }
         #endregion // Overrides / Event Handlers
 
