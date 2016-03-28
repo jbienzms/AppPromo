@@ -45,7 +45,11 @@ using Windows.ApplicationModel;
 using System.Runtime.InteropServices.WindowsRuntime;
 #endif
 
+#if WINDOWS_UWP
+namespace AppPromo.UWP
+#else
 namespace AppPromo
+#endif
 {
     /// <summary>
     /// A rating reminder control that can be placed on any Xaml page.

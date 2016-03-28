@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Confirm" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Nikoli</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>Pozneje</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>Izgleda, da ste uporabljali app za nekaj časa zdaj in mi bi radi slišali vaše pripombe. Bi želeli stopnja app ali povratno?</value>
+  </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>Ne opominjaj me več</value>
+  </data>
+</root>

@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{04A13B33-0083-47CA-A52F-5E61594F855E}</ProjectGuid>
+    <OutputType>winmdobj</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppPromo.UWP</RootNamespace>
+    <AssemblyName>AppPromo.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <AllowCrossPlatformRetargeting>false</AllowCrossPlatformRetargeting>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;WIN_RT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;WIN_RT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;WIN_RT</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;WIN_RT</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en-US</MultilingualFallbackLanguage>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="..\License\AppPromo.licenseheader">
+      <Link>AppPromo.licenseheader</Link>
+    </None>
+    <None Include="project.json" />
+    <PRIResource Include="Resources\cy\Resources.resw" />
+    <PRIResource Include="Resources\sr-Latn\Resources.resw" />
+    <PRIResource Include="Resources\sr-Cyrl\Resources.resw" />
+    <PRIResource Include="Resources\hr\Resources.resw" />
+    <PRIResource Include="Resources\bs-Latn\Resources.resw" />
+    <PRIResource Include="Resources\zh-Hant\Resources.resw" />
+    <PRIResource Include="Resources\zh-Hans\Resources.resw" />
+    <PRIResource Include="Resources\vi\Resources.resw" />
+    <PRIResource Include="Resources\uk\Resources.resw" />
+    <PRIResource Include="Resources\tr\Resources.resw" />
+    <PRIResource Include="Resources\th\Resources.resw" />
+    <PRIResource Include="Resources\sv\Resources.resw" />
+    <PRIResource Include="Resources\sl\Resources.resw" />
+    <PRIResource Include="Resources\sk\Resources.resw" />
+    <PRIResource Include="Resources\ru\Resources.resw" />
+    <PRIResource Include="Resources\ro\Resources.resw" />
+    <PRIResource Include="Resources\pt\Resources.resw" />
+    <PRIResource Include="Resources\pl\Resources.resw" />
+    <PRIResource Include="Resources\nl-NL\Resources.resw" />
+    <PRIResource Include="Resources\nl-BE\Resources.resw" />
+    <PRIResource Include="Resources\nl\Resources.resw" />
+    <PRIResource Include="Resources\nb\Resources.resw" />
+    <PRIResource Include="Resources\ms\Resources.resw" />
+    <PRIResource Include="Resources\lv\Resources.resw" />
+    <PRIResource Include="Resources\lt\Resources.resw" />
+    <PRIResource Include="Resources\ko\Resources.resw" />
+    <PRIResource Include="Resources\ja\Resources.resw" />
+    <PRIResource Include="Resources\it\Resources.resw" />
+    <PRIResource Include="Resources\id\Resources.resw" />
+    <PRIResource Include="Resources\hu\Resources.resw" />
+    <PRIResource Include="Resources\hi\Resources.resw" />
+    <PRIResource Include="Resources\he\Resources.resw" />
+    <PRIResource Include="Resources\fr\Resources.resw" />
+    <PRIResource Include="Resources\fi\Resources.resw" />
+    <PRIResource Include="Resources\fa\Resources.resw" />
+    <PRIResource Include="Resources\et\Resources.resw" />
+    <PRIResource Include="Resources\es\Resources.resw" />
+    <PRIResource Include="Resources\en-US\Resources.resw" />
+    <PRIResource Include="Resources\en\Resources.resw" />
+    <PRIResource Include="Resources\el\Resources.resw" />
+    <PRIResource Include="Resources\de\Resources.resw" />
+    <PRIResource Include="Resources\da\Resources.resw" />
+    <PRIResource Include="Resources\cs\Resources.resw" />
+    <PRIResource Include="Resources\ca\Resources.resw" />
+    <PRIResource Include="Resources\bg\Resources.resw" />
+    <PRIResource Include="Resources\ar\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.ar.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.bg.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.bs-Latn.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.ca.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.cs.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.cy.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.da.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.de.xlf">
+      <SubType>Designer</SubType>
+    </XliffResource>
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.el.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.en.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.es.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.et.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.fa.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.fi.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.fr.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.he.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.hi.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.hr.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.hu.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.id.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.it.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.ja.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.ko.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.lt.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.lv.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.ms.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.nb.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.nl-BE.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.nl-NL.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.nl.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.pl.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.pt.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.ro.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.ru.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.sk.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.sl.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.sr-Cyrl.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.sr-Latn.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.sv.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.th.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.tr.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.uk.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.vi.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.zh-Hans.xlf" />
+    <XliffResource Include="MultilingualResources\AppPromo.UWP.zh-Hant.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AppPromo.WP8\RateHelper.cs">
+      <Link>RateHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\AppPromo.WP8\RateReminder.cs">
+      <Link>RateReminder.cs</Link>
+    </Compile>
+    <Compile Include="Controls\ActionDialog.xaml.cs">
+      <DependentUpon>ActionDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\ActionDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\License\MS-LPL License.txt">
+      <Link>MS-LPL License.txt</Link>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

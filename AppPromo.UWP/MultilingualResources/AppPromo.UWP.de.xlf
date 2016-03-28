@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="de" original="APPPROMO.UAP/RESOURCES/EN-US/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1262.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="APPPROMO.UWP/RESOURCES/EN-US/RESOURCES.RESW">
+        <trans-unit id="Confirm" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="new">Yes</target>
+        </trans-unit>
+        <trans-unit id="Decline" translate="yes" xml:space="preserve">
+          <source>Never</source>
+          <target state="new">Never</target>
+        </trans-unit>
+        <trans-unit id="Delay" translate="yes" xml:space="preserve">
+          <source>Later</source>
+          <target state="new">Later</target>
+        </trans-unit>
+        <trans-unit id="DontRemindAgain" translate="yes" xml:space="preserve">
+          <source>Don't remind me again</source>
+          <target state="new">Don't remind me again</target>
+        </trans-unit>
+        <trans-unit id="RateAppPrompt" translate="yes" xml:space="preserve">
+          <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
+          <target state="new">It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

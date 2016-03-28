@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Confirm" xml:space="preserve">
+    <value>Evet</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Hiçbir zaman</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>Daha Sonra</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>Bu uygulama için biraz zaman şimdi kullanmakta ve biz yorumlarınızı duymak görmekten mutlu olacağız gibi görünüyor. App oran veya görüş bildirmek ister misiniz?</value>
+  </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>Bir daha anımsatma</value>
+  </data>
+</root>

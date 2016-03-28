@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Confirm" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>표시 안 함</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>나중에</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>사용 중인 응용 프로그램을 잠시 지금와 설명을 듣고 가입을 찾습니다. 응용 프로그램을 평가 하거나 피드백을 제공 하 시겠습니까?</value>
+  </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>이 메시지를 다시 표시 안 함</value>
+  </data>
+</root>

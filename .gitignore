@@ -27,3 +27,10 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 *.vssscc
 $tf*/
+.vs*/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+[Pp]ackages
+project.lock.json
