@@ -15,9 +15,6 @@
   <data name="Confirm" xml:space="preserve">
     <value>Taip</value>
   </data>
-  <data name="Decline" xml:space="preserve">
-    <value>Niekada</value>
-  </data>
   <data name="Delay" xml:space="preserve">
     <value>Vėliau</value>
   </data>
@@ -26,5 +23,8 @@
   </data>
   <data name="RateAppPrompt" xml:space="preserve">
     <value>Atrodo, jūs naudojate programą, o dabar ir mes norėtume išgirsti jūsų pastabas. Ar norite įvertinti app arba pateikiantys atsiliepimus?</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Ne</value>
   </data>
 </root>

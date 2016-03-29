@@ -15,9 +15,6 @@
   <data name="Confirm" xml:space="preserve">
     <value>Evet</value>
   </data>
-  <data name="Decline" xml:space="preserve">
-    <value>Hiçbir zaman</value>
-  </data>
   <data name="Delay" xml:space="preserve">
     <value>Daha sonra</value>
   </data>
@@ -26,5 +23,8 @@
   </data>
   <data name="RateAppPrompt" xml:space="preserve">
     <value>Sen app bir süre için şimdi kullanıyorum ve yorumlarınızı duymak istiyorum gibi görünüyor. Belgili tanımlık app oranı ya da görüş bildirmek ister misiniz?</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Hayır</value>
   </data>
 </root>

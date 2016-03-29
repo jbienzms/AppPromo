@@ -10,11 +10,6 @@
           <source>Yes</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Ναι</target>
         </trans-unit>
-        <trans-unit id="Decline" translate="yes" xml:space="preserve">
-          <source>No</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ποτέ</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-        </trans-unit>
         <trans-unit id="Delay" translate="yes" xml:space="preserve">
           <source>Later</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Αργότερα</target>
@@ -26,6 +21,10 @@
         <trans-unit id="RateAppPrompt" translate="yes" xml:space="preserve">
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Φαίνεται ότι έχετε χρησιμοποιήσει την εφαρμογή για λίγο τώρα, και θα θέλαμε πολύ να ακούσουμε τα σχόλιά σας. Θα θέλατε να Αξιολογήστε την εφαρμογή ή να παρέχουν σχόλια;</target>
+        </trans-unit>
+        <trans-unit id="Decline" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Όχι</target>
         </trans-unit>
       </group>
     </body>

@@ -15,9 +15,6 @@
   <data name="Confirm" xml:space="preserve">
     <value>Có</value>
   </data>
-  <data name="Decline" xml:space="preserve">
-    <value>Không bao giờ</value>
-  </data>
   <data name="Delay" xml:space="preserve">
     <value>Sau</value>
   </data>
@@ -26,5 +23,8 @@
   </data>
   <data name="RateAppPrompt" xml:space="preserve">
     <value>Chỗ ở này có vẻ như bạn đã sử dụng các ứng dụng trong một thời bây giờ và chúng tôi muốn nghe ý kiến của bạn. Bạn có muốn tỷ lệ ứng dụng hoặc cung cấp thông tin phản hồi?</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Không</value>
   </data>
 </root>

@@ -10,10 +10,6 @@
           <source>Yes</source>
           <target state="new">Yes</target>
         </trans-unit>
-        <trans-unit id="Decline" translate="yes" xml:space="preserve">
-          <source>No</source>
-          <target state="new">No</target>
-        </trans-unit>
         <trans-unit id="Delay" translate="yes" xml:space="preserve">
           <source>Later</source>
           <target state="new">Later</target>
@@ -25,6 +21,10 @@
         <trans-unit id="RateAppPrompt" translate="yes" xml:space="preserve">
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
           <target state="new">It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</target>
+        </trans-unit>
+        <trans-unit id="Decline" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="new">No</target>
         </trans-unit>
       </group>
     </body>

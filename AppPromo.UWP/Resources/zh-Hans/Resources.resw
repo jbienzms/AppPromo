@@ -15,9 +15,6 @@
   <data name="Confirm" xml:space="preserve">
     <value>是</value>
   </data>
-  <data name="Decline" xml:space="preserve">
-    <value>从不</value>
-  </data>
   <data name="Delay" xml:space="preserve">
     <value>以后</value>
   </data>
@@ -26,5 +23,8 @@
   </data>
   <data name="RateAppPrompt" xml:space="preserve">
     <value>它看起来像你一直在使用应用程序一段时间现在和我们很乐意听到您的意见。你想率应用程序或提供反馈？</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>否</value>
   </data>
 </root>

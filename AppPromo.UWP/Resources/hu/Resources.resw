@@ -15,9 +15,6 @@
   <data name="Confirm" xml:space="preserve">
     <value>Igen</value>
   </data>
-  <data name="Decline" xml:space="preserve">
-    <value>Soha</value>
-  </data>
   <data name="Delay" xml:space="preserve">
     <value>Később</value>
   </data>
@@ -26,5 +23,8 @@
   </data>
   <data name="RateAppPrompt" xml:space="preserve">
     <value>Úgy tűnik, egy ideje már használja a programot, és mi szeretnénk megismerni a véleményét. Szeretné értékelni a programot vagy visszajelzést küldeni?</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Nem</value>
   </data>
 </root>
