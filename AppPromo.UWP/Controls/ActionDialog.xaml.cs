@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace AppPromo.UWP.Controls
+namespace AppPromo.UWP
 {
     /// <summary>
     /// A dialog that prompts a user to perform an action.

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>AppPromo</id>
+        <version>1.0.1-beta1</version>
+        <title>App Promo for Windows</title>
+        <authors>jbienzms,toolboc (pdecarlo)</authors>
+        <owners>jbienzms</owners>
+        <projectUrl>https://github.com/jbienzms/AppPromo</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Easy to use library that gives ability to prompt users for app rating / feedback based on configurable properties. This library works with Windows Phone 8, 8.1 and 10 as well as Windows 8.1 and 10.</description>
+        <summary>Easily obtain app ratings / feedback from your users.  Translated to over 25 spoken languages and works with WinJS, C++, and C# Store Projects!</summary>
+        <releaseNotes>Added support for Windows 10 (UWP). Also added the ability for users to delay their rating instead of rating immediately or opting out entirely.</releaseNotes>
+        <tags>Windows 8, Windows 10, UWP, Windows Phone, Store, controls, rating, feedback</tags>
+    </metadata>
+    <files>
+		<file src="Builds\**\*.*" target="" />
+	</files>
+</package>

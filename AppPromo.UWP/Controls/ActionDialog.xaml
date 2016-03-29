@@ -1,8 +1,8 @@
 ﻿<ContentDialog
-    x:Class="AppPromo.UWP.Controls.ActionDialog"
+    x:Class="AppPromo.UWP.ActionDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:AppPromo.Controls"
+    xmlns:local="using:AppPromo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:xc="using:Windows.UI.Xaml.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"

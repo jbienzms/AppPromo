@@ -43,7 +43,6 @@ using Windows.ApplicationModel.Store;
 #endif
 
 #if WINDOWS_UWP
-using AppPromo.UWP.Controls;
 using Windows.UI.Xaml.Controls;
 #endif
 
@@ -179,7 +178,7 @@ namespace AppPromo
 
             // Use plain message box
             var result = MessageBox.Show(message, title, MessageBoxButton.OKCancel);
-            return return (result == MessageBoxResult.OK ? PromptResult.Confirm : PromptResult.Decline);
+            return (result == MessageBoxResult.OK ? PromptResult.Confirm : PromptResult.Decline);
 #endif
         }
 #pragma warning restore 1998
