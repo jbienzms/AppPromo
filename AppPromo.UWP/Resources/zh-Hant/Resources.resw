@@ -16,15 +16,15 @@
     <value>是</value>
   </data>
   <data name="Decline" xml:space="preserve">
-    <value>絕不</value>
+    <value>從未</value>
   </data>
   <data name="Delay" xml:space="preserve">
-    <value>較晚的</value>
-  </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>它看起來像您所使用的應用程式一段現在，我們希望聽到您的註解。您要評等應用程式或提供意見反應嗎吗？</value>
+    <value>更晚</value>
   </data>
   <data name="DontRemindAgain" xml:space="preserve">
     <value>不要再提醒我</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>它看起來像你一直在使用應用程式一段時間現在和我們很樂意聽到您的意見。你想率應用程式或提供回饋？</value>
   </data>
 </root>

@@ -8,15 +8,15 @@
       <group id="AppPromo">
         <trans-unit translate="yes" id="AppPromo\Resources\Cancel" xml:space="preserve">
           <source>Cancel</source>
-          <target state="signed-off" state-qualifier="mt-suggestion">Cancel</target>
+          <target state="signed-off" state-qualifier="tm-suggestion">Cancel</target>
         </trans-unit>
         <trans-unit translate="yes" id="AppPromo\Resources\OK" xml:space="preserve">
           <source>OK</source>
-          <target state="signed-off" state-qualifier="mt-suggestion">OK</target>
+          <target state="signed-off" state-qualifier="tm-suggestion">OK</target>
         </trans-unit>
         <trans-unit translate="yes" id="AppPromo\Resources\RateAppPrompt" xml:space="preserve">
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
-          <target state="signed-off" state-qualifier="mt-suggestion">It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</target>
+          <target state="signed-off" state-qualifier="tm-suggestion">It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</target>
         </trans-unit>
       </group>
     </body>

@@ -12,4 +12,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Confirm" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Никада</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>Касније</value>
+  </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>Немој да ме подсети</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>Изгледа да користите апликацију мало сада и волели би чути ваше коментаре. Желите ли да оцените апликацију или дати повратну информацију?</value>
+  </data>
 </root>

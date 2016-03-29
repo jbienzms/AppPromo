@@ -100,30 +100,44 @@ namespace AppPromo.UWP.Controls
         public ActionDialog()
         {
             this.InitializeComponent();
-            this.Loaded += ActionDialog_Loaded;
-            this.Unloaded += ActionDialog_Unloaded;
+            this.Opened += ActionDialog_Opened;
         }
-
         #endregion // Constructors
 
-        private void HandleSizeChange(Size newSize)
-        {
-            // HACK for ContentDialog not showing at right size and not handling rotation properly
-            LayoutRoot.Width = Math.Max(newSize.Width - 50, 0);
-            LayoutRoot.Height = Math.Max(newSize.Height - 50, 0);
-        }
-
         #region Overrides / Event Handlers
-        private void ActionDialog_Loaded(object sender, RoutedEventArgs e)
+        private void ActionDialog_Opened(ContentDialog sender, ContentDialogOpenedEventArgs args)
         {
-            Window.Current.SizeChanged += Window_SizeChanged;
-            var bounds = Window.Current.Bounds;
-            HandleSizeChange(new Size(bounds.Width, bounds.Height));
-        }
+            // HACK: Tweak the ContentDialog to show expanded content.
+            // 
+            // I'm really not a fan of hacks like this. They're brittle and if done wrong
+            // they can actually crash apps. But unfortunately the inner template for 
+            // ContentDialog is not easily changed and having the "don't remind me again" 
+            // check box floating up near the content looks really bad.
+            //
+            // Though the implementation below is brittle, at least it should not crash 
+            // if the default template changes and is not likely to break existing content.
+            // JB - 2016-03-29
 
-        private void ActionDialog_Unloaded(object sender, RoutedEventArgs e)
-        {
-            Window.Current.SizeChanged -= Window_SizeChanged;
+
+            // Try to find a parent Grid control
+            FrameworkElement parent = VisualTreeHelper.GetParent(LayoutRoot) as FrameworkElement;
+            var parentGrid = parent as Grid;
+            while ((parent != null) && (parentGrid == null))
+            {
+                parent = VisualTreeHelper.GetParent(parent) as FrameworkElement;
+                parentGrid = parent as Grid;
+            }
+
+            // If found
+            if (parentGrid != null)
+            {
+                // And it has exactly two rows
+                if (parentGrid.RowDefinitions.Count == 2)
+                {
+                    // Assume it's the right one and expand the content area (second row)
+                    parentGrid.RowDefinitions[1].Height = new GridLength(1, GridUnitType.Star);
+                }
+            }
         }
 
         private void ChkDontRemind_Checked(object sender, RoutedEventArgs e)
@@ -138,12 +152,7 @@ namespace AppPromo.UWP.Controls
             }
 
         }
-        private void Window_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
-        {
-            HandleSizeChange(e.Size);
-        }
         #endregion // Overrides / Event Handlers
-
 
         #region Public Properties
         /// <summary>

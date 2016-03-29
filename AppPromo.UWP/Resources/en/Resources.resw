@@ -12,16 +12,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Confirm" xml:space="preserve">
-    <value>Yes</value>
-  </data>
-  <data name="Decline" xml:space="preserve">
-    <value>Never</value>
-  </data>
-  <data name="Delay" xml:space="preserve">
-    <value>Later</value>
-  </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</value>
-  </data>
 </root>

@@ -19,12 +19,12 @@
     <value>从不</value>
   </data>
   <data name="Delay" xml:space="preserve">
-    <value>稍后</value>
-  </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>它看起来像您一直使用该应用程序一段时间现在和我们乐意倾听您的意见。要评价该应用程序或提供反馈信息吗？</value>
+    <value>以后</value>
   </data>
   <data name="DontRemindAgain" xml:space="preserve">
     <value>不要再提醒我</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>它看起来像你一直在使用应用程序一段时间现在和我们很乐意听到您的意见。你想率应用程序或提供反馈？</value>
   </data>
 </root>

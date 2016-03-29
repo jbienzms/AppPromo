@@ -8,7 +8,7 @@
       <group id="Resources">
         <trans-unit translate="yes" id="Resources\Hello" xml:space="preserve">
           <source>Hello</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Halo</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Halo</target>
         </trans-unit>
       </group>
     </body>

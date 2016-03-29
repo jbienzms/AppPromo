@@ -26,7 +26,7 @@
         </trans-unit>
         <trans-unit translate="yes" id="Resx/AppBarMenuItemText" xml:space="preserve">
           <source>Menu Item</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Στοιχείο μενού</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Στοιχείο μενού</target>
         </trans-unit>
       </group>
     </body>

@@ -18,15 +18,15 @@
         <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note></trans-unit>
         <trans-unit translate="yes" id="Resx/ApplicationTitle" xml:space="preserve">
           <source>MY APPLICATION</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">التطبيق الخاص بي</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">التطبيق الخاص بي</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/AppBarButtonText" xml:space="preserve">
           <source>add</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">إضافة</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">إضافة</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/AppBarMenuItemText" xml:space="preserve">
           <source>Menu Item</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">عنصر القائمة</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">عنصر القائمة</target>
         </trans-unit>
       </group>
     </body>

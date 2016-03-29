@@ -21,10 +21,10 @@
   <data name="Delay" xml:space="preserve">
     <value>Més tard</value>
   </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>No recordar-me una altra vegada</value>
+  </data>
   <data name="RateAppPrompt" xml:space="preserve">
     <value>Sembla he estat utilitzant l'app una estona ara i ens encantaria escoltar els seus comentaris. Li agradaria valora l'app o proporcionar resposta?</value>
-  </data>
-  <data name="DontRemindAgain" xml:space="preserve">
-    <value>No em tornis a avisar</value>
   </data>
 </root>

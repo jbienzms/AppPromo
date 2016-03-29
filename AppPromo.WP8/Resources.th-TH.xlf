@@ -8,7 +8,7 @@
       <group id="Resx">
         <trans-unit translate="yes" id="Resx/RateAppPrompt" xml:space="preserve">
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ดูเหมือนคุณใช้ app ในขณะนี้ และอยากฟังความเห็นของคุณ คุณต้องการราคา app หรือแสดงความคิดเห็น</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ดูเหมือนคุณใช้ app ในขณะนี้ และอยากฟังความเห็นของคุณ คุณต้องการราคา app หรือแสดงความคิดเห็น</target>
         </trans-unit>
       </group>
     </body>

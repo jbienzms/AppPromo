@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:AppPromo.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:xc="using:Windows.UI.Xaml.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300"
@@ -13,17 +14,31 @@
     PrimaryButtonText="Yes"
     SecondaryButtonText="Later"
     FullSizeDesired="False"
+    HorizontalAlignment="Center" 
+    VerticalAlignment="Center" 
+    HorizontalContentAlignment="Stretch" 
+    VerticalContentAlignment="Stretch"
+    ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+    MaxWidth="400" 
+    MaxHeight="500" 
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     >
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="ExpandedGrid">
+            <Grid>
+                <ContentPresenter/>
+            </Grid>
+        </DataTemplate>
+    </ContentDialog.Resources>
 
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <TextBlock Margin="0,30,0,30" Text="{Binding PromptText}" TextWrapping="Wrap" />
-        <CheckBox x:Name="ChkDontRemind" Grid.Row="1" HorizontalAlignment="Stretch" Content="{Binding DontRemindAgainText}" IsChecked="{Binding DontRemindAgain, Mode=TwoWay}" Checked="ChkDontRemind_Checked" Unchecked="ChkDontRemind_Checked" />
+        <CheckBox x:Name="ChkDontRemind" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Content="{Binding DontRemindAgainText}" IsChecked="{Binding DontRemindAgain, Mode=TwoWay}" Checked="ChkDontRemind_Checked" Unchecked="ChkDontRemind_Checked" />
         <!--<Button Grid.Row="1" Content="Don't remind me again" HorizontalAlignment="Stretch" />-->
 
         <!--<Grid Grid.Row="1" VerticalAlignment="Bottom" Margin="10,10,10,10">

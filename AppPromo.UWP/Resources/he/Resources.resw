@@ -16,15 +16,15 @@
     <value>כן</value>
   </data>
   <data name="Decline" xml:space="preserve">
-    <value>לעולם לא</value>
+    <value>אף פעם</value>
   </data>
   <data name="Delay" xml:space="preserve">
     <value>מאוחר יותר</value>
   </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>נראה כאילו אתה כבר משתמש ה-app במשך זמן מה כעת ואת שאנו אוהבים לשמוע את הערותיך. האם ברצונך לדרג את app או לספק משוב?</value>
-  </data>
   <data name="DontRemindAgain" xml:space="preserve">
     <value>אל תזכיר לי שוב</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>זה נראה כאילו אתה משתמש app לזמן עכשיו ונשמח לשמוע את הערותיך. האם ברצונך לדרג את היישום או לספק משוב?</value>
   </data>
 </root>

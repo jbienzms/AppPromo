@@ -12,7 +12,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Test" xml:space="preserve">
-    <value>Δοκιμή</value>
+  <data name="TestMessage" xml:space="preserve">
+    <value>Αυτό είναι ένα δοκιμαστικό μήνυμα για να επιβάλετε την μετάφραση.</value>
   </data>
 </root>

@@ -93,6 +93,7 @@ namespace AppPromo
                 DelayText = ReadResourceString("Delay"),
                 DontRemindAgainText = ReadResourceString("DontRemindAgain"),
                 PromptText = ReadResourceString("RateAppPrompt"),
+                Title = title,
             };
             
             var result = ContentDialogResult.None;
@@ -215,7 +216,14 @@ namespace AppPromo
             marketplaceReviewTask.Show(); 
 #endif
 #if WIN_RT
-            await Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" + CurrentApp.AppId));
+            try
+            {
+                await Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" + CurrentApp.AppId));
+            }
+            catch (Exception)
+            {
+                await new MessageDialog("There was a problem showing the rating dialog. This app may not be published to the store.").ShowAsync();
+            }
 #endif
         }
 #pragma warning restore 1998

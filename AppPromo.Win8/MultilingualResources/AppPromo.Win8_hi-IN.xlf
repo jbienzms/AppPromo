@@ -16,7 +16,7 @@
         </trans-unit>
         <trans-unit translate="yes" id="AppPromo\Resources\RateAppPrompt" xml:space="preserve">
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">उसे लगता है कि जैसे आप app कुछ समय के लिए अब का उपयोग कर दिया गया है, और हम आपकी टिप्पणी सुनने के लिए प्यार करते हैं। आप अनुप्रयोग को रेट करें या प्रतिक्रिया प्रदान करने के लिए चाहते हैं?</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">उसे लगता है कि जैसे आप app कुछ समय के लिए अब का उपयोग कर दिया गया है, और हम आपकी टिप्पणी सुनने के लिए प्यार करते हैं। आप अनुप्रयोग को रेट करें या प्रतिक्रिया प्रदान करने के लिए चाहते हैं?</target>
         </trans-unit>
       </group>
     </body>

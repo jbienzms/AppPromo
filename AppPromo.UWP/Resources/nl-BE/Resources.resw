@@ -22,9 +22,9 @@
     <value>Later</value>
   </data>
   <data name="DontRemindAgain" xml:space="preserve">
-    <value>Niet meer herinneren</value>
+    <value>Niet nogmaals aan herinneren mij</value>
   </data>
   <data name="RateAppPrompt" xml:space="preserve">
-    <value>Het lijkt erop dat u hebt gebruikt de app voor een tijdje nu en we graag uw opmerkingen. Wilt u de app beoordelen of feedback geven?</value>
+    <value>Het lijkt erop dat u hebt gebruikt de app voor een tijdje nu en we willen graag horen uw opmerkingen. Wilt u stem app of feedback?</value>
   </data>
 </root>

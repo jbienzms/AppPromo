@@ -180,7 +180,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <XliffResource Include="MultilingualResources\Sample.UAP.nl-NL.xlf" />
+    <XliffResource Include="MultilingualResources\Sample.UWP.nl-NL.xlf" />
     <XliffResource Include="MultilingualResources\Sample.UWP.ar.xlf" />
     <XliffResource Include="MultilingualResources\Sample.UWP.bg.xlf" />
     <XliffResource Include="MultilingualResources\Sample.UWP.bs-Latn.xlf" />

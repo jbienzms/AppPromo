@@ -16,15 +16,15 @@
     <value>はい</value>
   </data>
   <data name="Decline" xml:space="preserve">
-    <value>更新しない</value>
+    <value>表示しない</value>
   </data>
   <data name="Delay" xml:space="preserve">
-    <value>後で実行</value>
-  </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>使用したアプリを今すぐと積極的にコメントをお待ちするように見えます。アプリの評価やフィードバックを送信するもよろしいですか。</value>
+    <value>後で</value>
   </data>
   <data name="DontRemindAgain" xml:space="preserve">
-    <value>今後このメッセージを表示しない</value>
+    <value>今後はこのメッセージを表示しない</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>そう、あなたは今しばらくの間、アプリを使用しているし、私たちはあなたのコメントを聞いてみたいです。アプリを評価したり、フィードバックを提供するか?</value>
   </data>
 </root>

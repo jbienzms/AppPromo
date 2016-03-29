@@ -19,12 +19,12 @@
     <value>Tidak Pernah</value>
   </data>
   <data name="Delay" xml:space="preserve">
-    <value>Nanti</value>
-  </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>Sepertinya Anda telah menggunakan app untuk sementara waktu sekarang dan kami akan senang mendengar komentar Anda. Apakah Anda ingin menilai aplikasi atau memberikan umpan balik?</value>
+    <value>Kemudian</value>
   </data>
   <data name="DontRemindAgain" xml:space="preserve">
     <value>Jangan mengingatkan saya kembali</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>Sepertinya Anda telah menggunakan app untuk sementara waktu sekarang dan kami akan senang mendengar komentar Anda. Apakah Anda ingin menilai aplikasi atau memberikan umpan balik?</value>
   </data>
 </root>

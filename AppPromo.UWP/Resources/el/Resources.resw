@@ -21,10 +21,10 @@
   <data name="Delay" xml:space="preserve">
     <value>Αργότερα</value>
   </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>Φαίνεται ότι θα χρησιμοποιούσατε το app για λίγο τώρα και θα χαρούμε να ακούσετε τα σχόλιά σας. Θέλετε να αξιολογήσετε το app ή να στείλετε τα σχόλιά σας;</value>
-  </data>
   <data name="DontRemindAgain" xml:space="preserve">
-    <value>Να μην εμφανιστεί ξανά υπενθύμιση</value>
+    <value>Μην εμφανιστεί ξανά αυτή η υπενθύμιση</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>Φαίνεται ότι έχετε χρησιμοποιήσει την εφαρμογή για λίγο τώρα, και θα θέλαμε πολύ να ακούσουμε τα σχόλιά σας. Θα θέλατε να Αξιολογήστε την εφαρμογή ή να παρέχουν σχόλια;</value>
   </data>
 </root>

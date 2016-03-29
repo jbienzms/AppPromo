@@ -6,9 +6,9 @@
     </header>
     <body>
       <group id="SAMPLE.UWP/RESOURCES/EN-US/RESOURCES.RESW" datatype="resx">
-        <trans-unit id="Test" translate="yes" xml:space="preserve">
-          <source>Test</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Test</target>
+        <trans-unit id="TestMessage" translate="yes" xml:space="preserve">
+          <source>This is a test message to force translation.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il s'agit d'un message de test pour forcer la traduction.</target>
         </trans-unit>
       </group>
     </body>

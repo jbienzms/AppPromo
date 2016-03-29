@@ -19,12 +19,12 @@
     <value>Nunca</value>
   </data>
   <data name="Delay" xml:space="preserve">
-    <value>Mais Tarde</value>
-  </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>Parece que você estava usando o aplicativo por um tempo agora e adoraríamos ouvir seus comentários. Você gostaria de classificar o aplicativo ou fornecer comentários?</value>
+    <value>Mais tarde</value>
   </data>
   <data name="DontRemindAgain" xml:space="preserve">
     <value>Não exibir este aviso novamente</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>Parece que tem usado o app por um tempo agora e nós adoraríamos ouvir seus comentários. Gostaria de classificar o app ou fornecer feedback?</value>
   </data>
 </root>

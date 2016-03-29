@@ -21,10 +21,10 @@
   <data name="Delay" xml:space="preserve">
     <value>In seguito</value>
   </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>Sembra che si sta utilizzando l'applicazione per un periodo di tempo ora e ci piacerebbe ascoltare i commenti. Si desidera valutare l'applicazione o fornire commenti e suggerimenti?</value>
-  </data>
   <data name="DontRemindAgain" xml:space="preserve">
-    <value>Non visualizzare più questo messaggio</value>
+    <value>Non ricordarmelo nuovamente</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>Sembra che hai utilizzato l'app per un po' ora e ci piacerebbe sentire i vostri commenti. Vuoi votare l'app o fornire un feedback?</value>
   </data>
 </root>

@@ -12,4 +12,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Confirm" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>Später</value>
+  </data>
+  <data name="DontRemindAgain" xml:space="preserve">
+    <value>Erinnerung nicht mehr anzeigen</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>Es scheint als ob Sie diese App jetzt schon eine Weile benutzen und wir freuen uns ihre Kommentare darüber zu hören. Möchten Sie die App bewerten oder Feedback geben?</value>
+  </data>
 </root>

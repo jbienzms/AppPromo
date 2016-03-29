@@ -13,18 +13,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Confirm" xml:space="preserve">
-    <value>بله</value>
+    <value>‏‏بله</value>
   </data>
   <data name="Decline" xml:space="preserve">
     <value>هرگز</value>
   </data>
   <data name="Delay" xml:space="preserve">
-    <value>اواخر</value>
-  </data>
-  <data name="RateAppPrompt" xml:space="preserve">
-    <value>به نظر می رسد مثل شما برنامه در حالی که در حال حاضر استفاده می کرده اید و ما دوست دارم به شنیدن نظرات خود را. شما می خواهم به سرعت نرم افزار یا ارائه پیشنهادات و انتقادات?</value>
+    <value>بعداً</value>
   </data>
   <data name="DontRemindAgain" xml:space="preserve">
     <value>دوباره یادآوری نشود</value>
+  </data>
+  <data name="RateAppPrompt" xml:space="preserve">
+    <value>به نظر می رسد مثل شما برنامه در حالی که در حال حاضر استفاده می کرده اید و ما دوست دارم که شنیدن نظرات شما. شما می خواهم برای رای دادن به نرم افزار یا ارائه بازخورد?</value>
   </data>
 </root>

@@ -8,15 +8,15 @@
       <group id="AppPromo">
         <trans-unit translate="yes" id="AppPromo\Resources\Cancel" xml:space="preserve">
           <source>Cancel</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Annuleren</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Annuleren</target>
         </trans-unit>
         <trans-unit translate="yes" id="AppPromo\Resources\OK" xml:space="preserve">
           <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">OK</target>
         </trans-unit>
         <trans-unit translate="yes" id="AppPromo\Resources\RateAppPrompt" xml:space="preserve">
           <source>It looks like you've been using the app for a while now and we'd love to hear your comments. Would you like to rate the app or provide feedback?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Het lijkt erop dat u hebt gebruikt de app voor een tijdje nu en we graag uw opmerkingen. Wilt u de app beoordelen of feedback geven?</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Het lijkt erop dat u hebt gebruikt de app voor een tijdje nu en we graag uw opmerkingen. Wilt u de app beoordelen of feedback geven?</target>
         </trans-unit>
       </group>
     </body>
