@@ -11,8 +11,9 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Iawn</target>
         </trans-unit>
         <trans-unit id="Decline" translate="yes" xml:space="preserve">
-          <source>Never</source>
+          <source>No</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Byth</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Delay" translate="yes" xml:space="preserve">
           <source>Later</source>

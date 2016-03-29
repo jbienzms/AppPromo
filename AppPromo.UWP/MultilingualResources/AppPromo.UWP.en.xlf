@@ -11,8 +11,8 @@
           <target state="new">Yes</target>
         </trans-unit>
         <trans-unit id="Decline" translate="yes" xml:space="preserve">
-          <source>Never</source>
-          <target state="new">Never</target>
+          <source>No</source>
+          <target state="new">No</target>
         </trans-unit>
         <trans-unit id="Delay" translate="yes" xml:space="preserve">
           <source>Later</source>

@@ -121,7 +121,7 @@
     <value>Yes</value>
   </data>
   <data name="Decline" xml:space="preserve">
-    <value>Never</value>
+    <value>No</value>
   </data>
   <data name="Delay" xml:space="preserve">
     <value>Later</value>
