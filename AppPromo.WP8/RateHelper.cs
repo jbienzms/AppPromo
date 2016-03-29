@@ -85,40 +85,73 @@ namespace AppPromo
 
 #if WINDOWS_UWP
 
-            // Use action dialog
-            var dlg = new ActionDialog()
-            {
-                ConfirmText = ReadResourceString("Confirm"),
-                DeclineText = ReadResourceString("Decline"),
-                DelayText = ReadResourceString("Delay"),
-                DontRemindAgainText = ReadResourceString("DontRemindAgain"),
-                PromptText = ReadResourceString("RateAppPrompt"),
-                Title = title,
-            };
-            
-            var result = ContentDialogResult.None;
-
+            // First we will try the advanced AlertDialog route. However, mixing Xaml and WinJS is not supported.
+            // Therefore we must have a fallback using basic MessageDialog for WinJS (below).
             try
             {
-                result = await dlg.ShowAsync();
-            }
-            catch (Exception)
-            {
-                //	this may happen if any other modal window is shown at the moment (ie, Windows query about running application background task)
+                ActionDialog dlg = new ActionDialog()
+                {
+                    ConfirmText = ReadResourceString("Confirm"),
+                    DeclineText = ReadResourceString("Decline"),
+                    DelayText = ReadResourceString("Delay"),
+                    DontRemindAgainText = ReadResourceString("DontRemindAgain"),
+                    PromptText = ReadResourceString("RateAppPrompt"),
+                    Title = title,
+                };
+
+                var result = ContentDialogResult.None;
+
+                try
+                {
+                    result = await dlg.ShowAsync();
+                }
+                catch (Exception ex)
+                {
+                    //	this may happen if any other modal window is shown at the moment (ie, Windows query about running application background task)
+                    await new MessageDialog($"Show Error: {ex.Message}").ShowAsync();
+                }
+
+                // Convert to a PromptResult based on the state of the ActionDialog
+                if (result == ContentDialogResult.Primary)
+                {
+                    return PromptResult.Confirm;
+                }
+                else if (dlg.DontRemindAgain)
+                {
+                    return PromptResult.Decline;
+                }
+                else
+                {
+                    return PromptResult.Delay;
+                }
             }
 
-            if (result == ContentDialogResult.Primary)
+            // If we are here, ActionDialog is not supported. We must use basic MessageDialog instead.
+            catch (Exception) // No specific exception because it's HRESULT of RPC_E_WRONG_THREAD
             {
-                return PromptResult.Confirm;
+                // Use plain message dialog as with Win8 but use new string resource names
+                var dlg = new MessageDialog(message, title);
+                dlg.Commands.Add(new UICommand(ReadResourceString("Confirm"), null, true));
+                dlg.Commands.Add(new UICommand(ReadResourceString("Decline"), null, false));
+
+                var result = false;
+
+                try
+                {
+                    result = (bool)(await dlg.ShowAsync()).Id;
+                }
+                catch (Exception ex)
+                {
+                    //	this may happen if any other modal window is shown at the moment (ie, Windows query about running application background task)
+                    await new MessageDialog($"Show Error: {ex.Message}").ShowAsync();
+                }
+
+                // Convert to PromptResult
+                return (result ? PromptResult.Confirm : PromptResult.Decline);
             }
-            else if (dlg.DontRemindAgain)
-            {
-                return PromptResult.Decline;
-            }
-            else
-            {
-                return PromptResult.Delay;
-            }
+
+
+
 
 #elif WIN_RT
 
@@ -139,6 +172,8 @@ namespace AppPromo
 			}
 
 			return (result ? PromptResult.Confirm : PromptResult.Decline);
+
+
 
 #elif WINDOWS_PHONE
 
